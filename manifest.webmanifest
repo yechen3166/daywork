@@ -1,0 +1,26 @@
+{
+  "name": "新澳汇总",
+  "short_name": "新澳汇总",
+  "description": "新澳彩网页、论坛、飞机生肖汇总与开奖记录工具",
+  "lang": "zh-CN",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f7f6f7",
+  "theme_color": "#fff7f8",
+  "icons": [
+    {
+      "src": "./icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
