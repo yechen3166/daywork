@@ -1,22 +1,718 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#fff7f8"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="default"><title>新澳汇总</title><link rel="manifest" href="./manifest.webmanifest"><link rel="apple-touch-icon" href="./icons/icon-192.png"><meta name="apple-mobile-web-app-title" content="新澳汇总"><style>
-:root{--ink:#34343a;--muted:#898991;--line:#e9e5e7;--paper:#fff;--bg:#f7f6f7;--pink:#e94f68;--pale:#fff0f2;--green:#21885b;--red:#d74e5a;--blue:#4c84c4}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;-webkit-font-smoothing:antialiased}button,input,select{font:inherit}button{cursor:pointer;touch-action:manipulation}button,input,select{min-height:44px}.app{max-width:780px;margin:auto;padding:22px 14px calc(36px + env(safe-area-inset-bottom))}.brand{display:flex;align-items:center;justify-content:space-between;margin:0 2px 17px}.title{font-size:25px;font-weight:800;letter-spacing:2px;color:var(--pink)}.save{font-size:11px;color:#8d8d95;background:#fff;border:1px solid var(--line);border-radius:99px;padding:7px 10px}.hero{background:linear-gradient(125deg,#e94f68,#f58a9a);border-radius:23px;padding:20px;color:white;box-shadow:0 10px 28px #e94f681c}.hero-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}.caption{font-size:11px;opacity:.85;letter-spacing:1px}.date{font-size:15px;margin-top:6px}.clock{font-size:35px;font-weight:300;font-variant-numeric:tabular-nums;margin-top:3px}.period{display:flex;align-items:baseline;gap:5px}.period b{font-size:41px;font-weight:600}.period span{font-size:12px}.hero-foot{border-top:1px solid #ffffff55;margin-top:15px;padding-top:11px;font-size:11px;opacity:.9;display:flex;justify-content:space-between;gap:8px}.section{margin-top:20px}.section-head{display:flex;align-items:center;justify-content:space-between;margin:0 2px 10px;gap:10px}.section-head h2{font-size:20px;margin:0;font-weight:750}.section-head small{font-size:11px;color:var(--muted)}.card{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:14px;box-shadow:0 4px 15px #30202a05}.web-row{border:1px solid #eee8ea;border-radius:13px;margin-bottom:9px;overflow:hidden}.web-row:last-child{margin-bottom:0}.web-name{background:#fff8f9;padding:10px 12px;display:flex;align-items:center;gap:8px}.name-input{width:100%;border:0;background:transparent;font-weight:750;font-size:16px;outline:0;color:var(--ink)}.delete{background:transparent;color:#b0a7ab;min-width:40px;font-size:20px}.choices{display:flex;gap:8px;flex-wrap:wrap;padding:10px 11px}.choice{display:flex;align-items:center;gap:4px;background:#faf9fa;border:1px solid #eee9eb;border-radius:10px;padding:3px 6px 3px 8px;min-height:44px}.animal-btn{background:transparent;border:0;padding:2px;font-size:22px;min-width:31px;min-height:38px}.tag-input{width:88px;min-width:45px;border:0;border-bottom:1px dashed #d7cdd1;background:transparent;font-size:12px;outline:0}.add-inline{background:#fff0f2;color:#cf5266;border-radius:9px;padding:7px 11px;font-size:12px}.addbar{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.primary{background:var(--pink);color:#fff;border:0;border-radius:11px;padding:9px 13px;font-size:13px;font-weight:650}.secondary{background:#fff;border:1px solid var(--line);color:#696970;border-radius:11px;padding:8px 12px;font-size:12px}.user-row{display:grid;grid-template-columns:minmax(105px,1fr) auto;gap:10px;padding:11px 0;border-bottom:1px solid #f0ecee;align-items:center}.user-row:last-child{border-bottom:0}.user-main{min-width:0}.username{font-size:14px;font-weight:650;overflow-wrap:anywhere}.user-sub{font-size:11px;color:var(--muted);margin-top:5px}.picks{display:flex;gap:3px;flex-wrap:wrap;justify-content:flex-end;align-items:center}.pick{background:#faf8f9;border:1px solid #eee8eb;border-radius:8px;padding:2px 5px;min-width:35px;min-height:40px;font-size:21px}.pick.empty{font-size:12px;color:#aaa;padding:5px 8px}.stats{display:flex;gap:5px;flex-wrap:wrap;margin-top:6px}.pill{font-size:10px;padding:4px 7px;border-radius:6px;background:#f5f4f5;color:#888}.pill.hit{background:#e8f6ed;color:#248351}.pill.miss{background:#fff0f0;color:#c44d59}.details{margin-top:7px}.details summary{font-size:11px;color:#777;cursor:pointer;min-height:35px;display:flex;align-items:center}.record-list{display:grid;gap:5px;padding:5px 0 8px}.record{display:flex;justify-content:space-between;gap:8px;font-size:11px;color:#777;background:#faf9fa;border-radius:7px;padding:7px}.result-form{display:grid;grid-template-columns:75px 1fr;gap:8px}.field{width:100%;border:1px solid var(--line);border-radius:10px;padding:9px 10px;background:#fff;font-size:14px}.wide{grid-column:1/-1}.rank-list{display:grid;gap:7px}.rank-row{display:grid;grid-template-columns:27px 32px 1fr auto;gap:8px;align-items:center;padding:10px;border-radius:11px;background:#fff9fa;border:1px solid #f3e9ec}.rank-no{font-size:12px;color:#aaa}.rank-emoji{font-size:23px}.rank-name{font-size:14px;font-weight:750}.rank-count{font-size:12px;color:#d84f67;font-weight:750}.rank-count small{display:block;font-size:10px;color:#888;font-weight:400;margin-top:3px}.history details summary,.drawer summary{min-height:44px;cursor:pointer;display:flex;align-items:center;justify-content:space-between;font-weight:650;font-size:14px;list-style:none}.history details summary::-webkit-details-marker,.drawer summary::-webkit-details-marker{display:none}.history details summary:after,.drawer summary:after{content:'＋';color:#aaa}.history details[open] summary:after,.drawer[open] summary:after{content:'−'}.history-list{max-height:360px;overflow:auto}.hist-row{padding:10px 0;border-bottom:1px solid var(--line)}.hist-head{font-size:11px;color:#777;margin-bottom:7px;display:flex;justify-content:space-between}.nums{display:flex;gap:4px;flex-wrap:wrap}.num{border-radius:50%;width:34px;height:34px;display:grid;place-items:center;color:#fff;font-size:12px;background:#77a986}.num.red{background:#d96d72}.num.blue{background:#6497b3}.num.special{outline:2px solid #edc8a2;outline-offset:1px}.hint{font-size:11px;line-height:1.8;color:#929098;margin-top:10px}.toast{position:fixed;bottom:calc(20px + env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);background:#333;color:white;border-radius:12px;padding:11px 16px;font-size:13px;opacity:0;pointer-events:none;transition:opacity .2s;z-index:30}.toast.show{opacity:1}.modal-bg{position:fixed;inset:0;background:#17101680;display:flex;align-items:flex-end;justify-content:center;padding:14px;z-index:20}.modal-bg[hidden]{display:none}.modal{background:#fff;border-radius:22px 22px 18px 18px;padding:17px;width:100%;max-width:500px;max-height:82vh;overflow:auto}.modal-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}.modal-head h3{margin:0;font-size:17px}.animal-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.animal-option{display:flex;align-items:center;justify-content:center;gap:5px;border:1px solid var(--line);background:#fff;border-radius:11px;padding:8px 2px;min-height:52px}.animal-option.selected{border-color:var(--pink);background:var(--pale);color:#c7445c}.modal-bottom{display:flex;gap:8px;margin-top:13px}.modal-bottom>*{flex:1}@media(max-width:420px){.app{padding-left:11px;padding-right:11px}.hero{padding:17px}.clock{font-size:31px}.period b{font-size:37px}.card{padding:11px}.user-row{grid-template-columns:minmax(90px,1fr) auto;gap:5px}.pick{min-width:31px;font-size:19px}.title{font-size:23px}.rank-row{grid-template-columns:22px 28px 1fr auto}}
-</style></head><body><main class="app"><header class="brand"><div class="title">新澳汇总</div><div class="save" id="saveState">● 本地保存</div></header><div class="addbar" style="margin:0 2px 14px"><button class="secondary" id="clearAllZodiac" style="color:#c7445c;border-color:#f0cbd2;width:100%;font-weight:700">一键清空所有已添加生肖</button></div><section class="hero"><div class="hero-top"><div><div class="caption">DEVICE LOCAL TIME</div><div class="date" id="date">—</div><div class="clock" id="clock">--:--:--</div></div><div class="period"><b id="todayPeriod">001</b><span>期</span></div></div><div class="hero-foot"><span id="weekday">—</span><span id="latestInfo">历史数据加载中</span></div></section>
-<section class="section"><div class="section-head"><h2>网页</h2><small>点击生肖图标选择 · 可加多肖与标签</small></div><div class="card"><div id="webList"></div><div class="addbar"><button class="primary" id="addWeb">＋ 添加网页</button></div></div></section>
-<section class="section"><div class="section-head"><h2>论坛</h2><small>自动核对七个号码 · 连胜/连败</small></div><div class="card"><div id="forumList"></div><div class="addbar"><input class="field" id="forumNewName" placeholder="新增论坛用户名" style="flex:1;min-width:150px"><button class="primary" id="addForum">添加用户</button></div></div></section>
-<section class="section"><div class="section-head"><h2>飞机</h2><small>最近战绩可展开查看</small></div><div class="card"><div id="planeList"></div><div class="addbar"><input class="field" id="planeNewName" placeholder="新增飞机用户名" style="flex:1;min-width:150px"><button class="primary" id="addPlane">添加用户</button></div></div></section>
-<section class="section"><div class="section-head"><h2>生肖总排名</h2><small>总数 = 网页 / 论坛 / 飞机</small></div><div class="card"><div id="ranking" class="rank-list"></div><p class="hint">总数按各版块中已选择的生肖条目累计；同一条目选择多个生肖时，每个生肖分别计1次。排序按总数从高到低，n1/n2/n3分别对应网页、论坛、飞机。</p></div></section>
-<section class="section"><div class="section-head"><h2>开奖记录</h2><small id="historyCount">内置历史</small></div><div class="card"><details><summary>手动添加开奖结果</summary><form id="resultForm" style="margin-top:10px"><div class="result-form"><input class="field" id="periodInput" type="number" min="1" max="365" placeholder="期号" required><input class="field" id="numsInput" placeholder="6平码 + 特码，如 02 21 17 40 11 24 +14" required><button class="primary wide" type="submit">保存开奖结果并更新统计</button></div></form><p class="hint">已内置048—295期。后续开奖继续在这里手动录入；生肖命中按每期七个号码判断。数据保存在当前设备浏览器中。</p></details><hr style="border:0;border-top:1px solid #eee;margin:12px 0"><details class="history"><summary>展开历史开奖记录</summary><div class="history-list" id="historyList"></div></details><div class="addbar"><button class="secondary" id="exportBtn">导出备份</button><button class="secondary" id="importBtn">导入备份</button><input type="file" id="importFile" accept="application/json" hidden></div></div></section><p class="hint" style="text-align:center;margin:18px 0 0">新澳汇总 · iPhone 适配版 · 设备本地保存</p></main><div class="toast" id="toast"></div><div class="modal-bg" id="modalBg" hidden><div class="modal"><div class="modal-head"><h3 id="modalTitle">选择生肖</h3><button class="secondary" id="modalClose">关闭</button></div><div class="animal-grid" id="animalGrid"></div><div class="modal-bottom"><button class="secondary" id="modalClear">清空选择</button><button class="primary" id="modalSave">确认</button></div></div></div>
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#fff7f8">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<title>新澳汇总</title>
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="apple-touch-icon" href="./icons/icon-192.png">
+<meta name="apple-mobile-web-app-title" content="新澳汇总">
+<style>
+:root{--ink:#34343a;--muted:#898991;--line:#e9e5e7;--paper:#fff;--bg:#f7f6f7;--pink:#e94f68;--pale:#fff0f2;--green:#21885b;--red:#d74e5a;--blue:#4c84c4}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;-webkit-font-smoothing:antialiased}
+button,input,select{font:inherit}
+button{cursor:pointer;touch-action:manipulation}
+button,input,select{min-height:44px}
+.app{max-width:780px;margin:auto;padding:22px 14px calc(36px + env(safe-area-inset-bottom))}
+.brand{display:flex;align-items:center;justify-content:space-between;margin:0 2px 17px}
+.title{font-size:25px;font-weight:800;letter-spacing:2px;color:var(--pink)}
+.save{font-size:11px;color:#8d8d95;background:#fff;border:1px solid var(--line);border-radius:99px;padding:7px 10px}
+.hero{background:linear-gradient(125deg,#e94f68,#f58a9a);border-radius:23px;padding:20px;color:white;box-shadow:0 10px 28px #e94f681c}
+.hero-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.caption{font-size:11px;opacity:.85;letter-spacing:1px}
+.date{font-size:15px;margin-top:6px}
+.clock{font-size:35px;font-weight:300;font-variant-numeric:tabular-nums;margin-top:3px}
+.period{display:flex;align-items:baseline;gap:5px}
+.period b{font-size:41px;font-weight:600}
+.period span{font-size:12px}
+.hero-foot{border-top:1px solid #ffffff55;margin-top:15px;padding-top:11px;font-size:11px;opacity:.9;display:flex;justify-content:space-between;gap:8px}
+.section{margin-top:20px}
+.section-head{display:flex;align-items:center;justify-content:space-between;margin:0 2px 10px;gap:10px}
+.section-head h2{font-size:20px;margin:0;font-weight:750}
+.section-head small{font-size:11px;color:var(--muted)}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:14px;box-shadow:0 4px 15px #30202a05}
+.web-row{border:1px solid #eee8ea;border-radius:13px;margin-bottom:9px;overflow:visible}
+.web-row:last-child{margin-bottom:0}
+.web-name{background:#fff8f9;padding:10px 12px;display:flex;align-items:center;gap:8px;border-radius:12px 12px 0 0}
+.name-input{width:100%;border:0;background:transparent;font-weight:750;font-size:16px;outline:0;color:var(--ink)}
+.delete{background:transparent;color:#b0a7ab;min-width:40px;font-size:20px;border:0}
+.choices{display:flex;gap:12px 10px;flex-wrap:wrap;padding:14px 11px 11px}
+.choice{position:relative;display:flex;align-items:center;gap:4px;background:#faf9fa;border:1px solid #eee9eb;border-radius:10px;padding:3px 8px 3px 8px;min-height:44px}
+.choice-del{position:absolute;top:-7px;right:-7px;width:20px;height:20px;min-height:20px;min-width:20px;border-radius:50%;background:#ff4d6a;color:#fff;border:2px solid #fff;display:flex;align-items:center;justify-content:center;font-size:13px;line-height:1;padding:0;cursor:pointer;box-shadow:0 2px 5px rgba(233,79,104,0.35);z-index:2;transition:transform .15s}
+.choice-del:active{transform:scale(.88);background:#d8324f}
+.animal-btn{background:transparent;border:0;padding:2px;font-size:22px;min-width:31px;min-height:38px}
+.tag-input{width:82px;min-width:45px;border:0;border-bottom:1px dashed #d7cdd1;background:transparent;font-size:12px;outline:0}
+.add-inline{background:#fff0f2;color:#cf5266;border:0;border-radius:9px;padding:7px 11px;font-size:12px}
+.addbar{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.primary{background:var(--pink);color:#fff;border:0;border-radius:11px;padding:9px 13px;font-size:13px;font-weight:650}
+.secondary{background:#fff;border:1px solid var(--line);color:#696970;border-radius:11px;padding:8px 12px;font-size:12px}
+.user-row{display:grid;grid-template-columns:minmax(105px,1fr) auto;gap:10px;padding:12px 0;border-bottom:1px solid #f0ecee;align-items:center}
+.user-row:last-child{border-bottom:0}
+.user-main{min-width:0}
+.user-top{display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin-bottom:5px}
+.username{font-size:15px;font-weight:700;overflow-wrap:anywhere;color:#2c2c32}
+/* 独立连胜 UI */
+.streak-badge{display:inline-flex;align-items:center;gap:3px;padding:3px 9px;border-radius:99px;font-size:11px;font-weight:700;line-height:1;letter-spacing:0.5px}
+.streak-badge.win{background:linear-gradient(135deg,#ff5252,#ff7a45);color:#fff;box-shadow:0 2px 7px rgba(255,82,82,0.32);border:1px solid rgba(255,255,255,0.3)}
+.streak-badge.lose{background:linear-gradient(135deg,#7b8b9a,#a5b4c4);color:#fff;box-shadow:0 2px 6px rgba(123,139,154,0.25)}
+.streak-badge.wait{background:#f3eff1;color:#8a8387;border:1px solid #e7e0e3}
+.picks{display:flex;gap:5px;flex-wrap:wrap;justify-content:flex-end;align-items:center}
+.pick{background:#faf8f9;border:1px solid #eee8eb;border-radius:8px;padding:2px 6px;min-width:35px;min-height:40px;font-size:21px}
+.pick.empty{font-size:12px;color:var(--pink);background:#fff5f6;border:1px dashed #f3cbd2;padding:5px 9px;font-weight:600}
+.stats{display:flex;gap:5px;flex-wrap:wrap;margin-top:5px}
+.pill{font-size:10px;padding:3px 7px;border-radius:6px;background:#f5f4f5;color:#888}
+.pill.hit{background:#e8f6ed;color:#248351;font-weight:600}
+.pill.miss{background:#fff0f0;color:#c44d59;font-weight:600}
+.details{margin-top:7px}
+.details summary{font-size:11px;color:#777;cursor:pointer;min-height:35px;display:flex;align-items:center}
+.record-list{display:grid;gap:5px;padding:5px 0 8px}
+.record{display:flex;justify-content:space-between;gap:8px;font-size:11px;color:#777;background:#faf9fa;border-radius:7px;padding:7px}
+.result-form{display:grid;grid-template-columns:75px 1fr;gap:8px}
+.field{width:100%;border:1px solid var(--line);border-radius:10px;padding:9px 10px;background:#fff;font-size:14px}
+.wide{grid-column:1/-1}
+.rank-list{display:grid;gap:7px}
+.rank-row{display:grid;grid-template-columns:27px 32px 1fr auto;gap:8px;align-items:center;padding:10px;border-radius:11px;background:#fff9fa;border:1px solid #f3e9ec}
+.rank-no{font-size:12px;color:#aaa}
+.rank-emoji{font-size:23px}
+.rank-name{font-size:14px;font-weight:750}
+.rank-count{font-size:12px;color:#d84f67;font-weight:750}
+.rank-count small{display:block;font-size:10px;color:#888;font-weight:400;margin-top:3px}
+.history details summary,.drawer summary{min-height:44px;cursor:pointer;display:flex;align-items:center;justify-content:space-between;font-weight:650;font-size:14px;list-style:none}
+.history details summary::-webkit-details-marker,.drawer summary::-webkit-details-marker{display:none}
+.history details summary:after,.drawer summary:after{content:'＋';color:#aaa}
+.history details[open] summary:after,.drawer[open] summary:after{content:'−'}
+.history-list{max-height:360px;overflow:auto}
+.hist-row{padding:10px 0;border-bottom:1px solid var(--line)}
+.hist-head{font-size:11px;color:#777;margin-bottom:7px;display:flex;justify-content:space-between}
+.nums{display:flex;gap:4px;flex-wrap:wrap}
+.num{border-radius:50%;width:34px;height:34px;display:grid;place-items:center;color:#fff;font-size:12px;background:#77a986}
+.num.red{background:#d96d72}
+.num.blue{background:#6497b3}
+.num.special{outline:2px solid #edc8a2;outline-offset:1px}
+.hint{font-size:11px;line-height:1.8;color:#929098;margin-top:10px}
+.toast{position:fixed;bottom:calc(20px + env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);background:#333;color:white;border-radius:12px;padding:11px 16px;font-size:13px;opacity:0;pointer-events:none;transition:opacity .2s;z-index:30}
+.toast.show{opacity:1}
+.modal-bg{position:fixed;inset:0;background:#17101680;display:flex;align-items:flex-end;justify-content:center;padding:14px;z-index:20}
+.modal-bg[hidden]{display:none}
+.modal{background:#fff;border-radius:22px 22px 18px 18px;padding:17px;width:100%;max-width:500px;max-height:82vh;overflow:auto}
+.modal-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.modal-head h3{margin:0;font-size:17px}
+.animal-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.animal-option{display:flex;align-items:center;justify-content:center;gap:5px;border:1px solid var(--line);background:#fff;border-radius:11px;padding:8px 2px;min-height:52px}
+.animal-option.selected{border-color:var(--pink);background:var(--pale);color:#c7445c}
+.modal-bottom{display:flex;gap:8px;margin-top:13px}
+.modal-bottom>*{flex:1}
+@media(max-width:420px){
+  .app{padding-left:11px;padding-right:11px}
+  .hero{padding:17px}
+  .clock{font-size:31px}
+  .period b{font-size:37px}
+  .card{padding:11px}
+  .user-row{grid-template-columns:minmax(90px,1fr) auto;gap:5px}
+  .pick{min-width:31px;font-size:19px}
+  .title{font-size:23px}
+  .rank-row{grid-template-columns:22px 28px 1fr auto}
+}
+</style>
+</head>
+<body>
+<main class="app">
+<header class="brand">
+  <div class="title">新澳汇总</div>
+  <div class="save" id="saveState">● 本地保存</div>
+</header>
+<div class="addbar" style="margin:0 2px 14px">
+  <button class="secondary" id="clearAllZodiac" style="color:#c7445c;border-color:#f0cbd2;width:100%;font-weight:700">一键清空所有已添加生肖</button>
+</div>
+<section class="hero">
+  <div class="hero-top">
+    <div>
+      <div class="caption">DEVICE LOCAL TIME</div>
+      <div class="date" id="date">—</div>
+      <div class="clock" id="clock">--:--:--</div>
+    </div>
+    <div class="period"><b id="todayPeriod">001</b><span>期</span></div>
+  </div>
+  <div class="hero-foot"><span id="weekday">—</span><span id="latestInfo">历史数据加载中</span></div>
+</section>
+
+<section class="section">
+  <div class="section-head"><h2>网页</h2><small>点击生肖图标选择 · 可加多肖与标签</small></div>
+  <div class="card">
+    <div id="webList"></div>
+    <div class="addbar"><button class="primary" id="addWeb">＋ 添加网页</button></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head"><h2>论坛</h2><small>自动核对七个号码 · 独立连胜战绩</small></div>
+  <div class="card">
+    <div id="forumList"></div>
+    <div class="addbar">
+      <input class="field" id="forumNewName" placeholder="新增论坛用户名" style="flex:1;min-width:150px">
+      <button class="primary" id="addForum">添加用户</button>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head"><h2>飞机</h2><small>独立连胜战绩 · 最近战绩可展开</small></div>
+  <div class="card">
+    <div id="planeList"></div>
+    <div class="addbar">
+      <input class="field" id="planeNewName" placeholder="新增飞机用户名" style="flex:1;min-width:150px">
+      <button class="primary" id="addPlane">添加用户</button>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head"><h2>生肖总排名</h2><small>总数 = 网页 / 论坛 / 飞机</small></div>
+  <div class="card">
+    <div id="ranking" class="rank-list"></div>
+    <p class="hint">总数按各版块中已选择的生肖条目累计；同一条目选择多个生肖时，每个生肖分别计1次。排序按总数从高到低，n1/n2/n3分别对应网页、论坛、飞机。</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head"><h2>开奖记录</h2><small id="historyCount">内置历史</small></div>
+  <div class="card">
+    <details>
+      <summary>手动添加开奖结果</summary>
+      <form id="resultForm" style="margin-top:10px">
+        <div class="result-form">
+          <input class="field" id="periodInput" type="number" min="1" max="365" placeholder="期号" required>
+          <input class="field" id="numsInput" placeholder="6平码 + 特码，如 02 21 17 40 11 24 +14" required>
+          <button class="primary wide" type="submit">保存开奖结果并更新统计</button>
+        </div>
+      </form>
+      <p class="hint">已内置048—295期。后续开奖继续在这里手动录入；生肖命中按每期七个号码判断。数据保存在当前设备浏览器中。</p>
+    </details>
+    <hr style="border:0;border-top:1px solid #eee;margin:12px 0">
+    <details class="history">
+      <summary>展开历史开奖记录</summary>
+      <div class="history-list" id="historyList"></div>
+    </details>
+    <div class="addbar">
+      <button class="secondary" id="exportBtn">导出备份</button>
+      <button class="secondary" id="importBtn">导入备份</button>
+      <input type="file" id="importFile" accept="application/json" hidden>
+    </div>
+  </div>
+</section>
+
+<p class="hint" style="text-align:center;margin:18px 0 0">新澳汇总 · iPhone 适配版 · 设备本地保存</p>
+</main>
+
+<div class="toast" id="toast"></div>
+
+<div class="modal-bg" id="modalBg" hidden>
+  <div class="modal">
+    <div class="modal-head">
+      <h3 id="modalTitle">选择生肖</h3>
+      <button class="secondary" id="modalClose">关闭</button>
+    </div>
+    <div class="animal-grid" id="animalGrid"></div>
+    <div class="modal-bottom">
+      <button class="secondary" id="modalClear">清空选择</button>
+      <button class="primary" id="modalSave">确认</button>
+    </div>
+  </div>
+</div>
+
 <script>
-const ANIMALS=['鼠','牛','虎','兔','龙','蛇','马','羊','猴','鸡','狗','猪'];const EMOJI=['🐭','🐮','🐯','🐰','🐲','🐍','🐴','🐑','🐵','🐔','🐶','🐷'];const ORDER=['马','蛇','龙','兔','虎','牛','鼠','猪','狗','鸡','猴','羊'];const RED=new Set([1,2,7,8,12,13,18,19,23,24,29,30,34,35,40,45,46]);const BLUE=new Set([3,4,9,10,14,15,20,25,26,31,36,37,41,42,47,48]);const DRAWS=[{"period":48,"date":"2026-02-17","nums":[8,38,29,32,46,16,24],"source":"seelottery"},{"period":49,"date":"2026-02-18","nums":[28,42,22,49,12,31,13],"source":"seelottery"},{"period":50,"date":"2026-02-19","nums":[10,13,30,37,33,44,23],"source":"seelottery"},{"period":51,"date":"2026-02-20","nums":[40,42,44,6,14,38,1],"source":"seelottery"},{"period":52,"date":"2026-02-21","nums":[15,46,14,13,40,35,38],"source":"seelottery"},{"period":53,"date":"2026-02-22","nums":[16,12,33,17,41,18,15],"source":"seelottery"},{"period":54,"date":"2026-02-23","nums":[37,30,11,19,49,32,48],"source":"seelottery"},{"period":55,"date":"2026-02-24","nums":[31,28,20,21,39,9,14],"source":"seelottery"},{"period":56,"date":"2026-02-25","nums":[45,9,6,7,10,26,48],"source":"seelottery"},{"period":57,"date":"2026-02-26","nums":[21,29,40,30,26,34,23],"source":"seelottery"},{"period":58,"date":"2026-02-27","nums":[20,38,13,21,33,40,31],"source":"seelottery"},{"period":59,"date":"2026-02-28","nums":[29,19,24,43,28,12,10],"source":"seelottery"},{"period":60,"date":"2026-03-01","nums":[5,27,40,34,39,1,9],"source":"seelottery"},{"period":61,"date":"2026-03-02","nums":[46,17,8,25,2,37,29],"source":"seelottery"},{"period":62,"date":"2026-03-03","nums":[46,29,6,49,35,42,24],"source":"seelottery"},{"period":63,"date":"2026-03-04","nums":[36,26,37,2,44,31,28],"source":"seelottery"},{"period":64,"date":"2026-03-05","nums":[8,23,40,44,34,2,18],"source":"seelottery"},{"period":65,"date":"2026-03-06","nums":[2,45,17,38,33,24,5],"source":"seelottery"},{"period":66,"date":"2026-03-07","nums":[24,20,36,44,2,28,37],"source":"seelottery"},{"period":67,"date":"2026-03-08","nums":[15,30,6,1,26,9,5],"source":"seelottery"},{"period":68,"date":"2026-03-09","nums":[49,2,1,26,38,21,23],"source":"seelottery"},{"period":69,"date":"2026-03-10","nums":[23,16,10,34,8,36,24],"source":"seelottery"},{"period":70,"date":"2026-03-11","nums":[47,17,23,10,41,7,25],"source":"seelottery"},{"period":71,"date":"2026-03-12","nums":[44,30,25,5,41,8,48],"source":"seelottery"},{"period":72,"date":"2026-03-13","nums":[12,28,1,42,25,44,46],"source":"seelottery"},{"period":73,"date":"2026-03-14","nums":[7,29,1,33,36,14,34],"source":"seelottery"},{"period":74,"date":"2026-03-15","nums":[12,31,49,25,24,32,10],"source":"seelottery"},{"period":75,"date":"2026-03-16","nums":[19,22,26,20,41,27,33],"source":"seelottery"},{"period":76,"date":"2026-03-17","nums":[12,7,24,22,3,41,2],"source":"seelottery"},{"period":77,"date":"2026-03-18","nums":[37,32,46,25,39,30,29],"source":"seelottery"},{"period":78,"date":"2026-03-19","nums":[18,17,10,33,2,8,46],"source":"seelottery"},{"period":79,"date":"2026-03-20","nums":[49,34,6,20,4,43,35],"source":"seelottery"},{"period":80,"date":"2026-03-21","nums":[21,18,17,48,9,42,3],"source":"seelottery"},{"period":81,"date":"2026-03-22","nums":[4,36,14,15,35,41,17],"source":"seelottery"},{"period":82,"date":"2026-03-23","nums":[3,21,33,37,41,25,27],"source":"seelottery"},{"period":83,"date":"2026-03-24","nums":[46,8,23,36,30,1,5],"source":"seelottery"},{"period":84,"date":"2026-03-25","nums":[7,24,2,5,20,31,16],"source":"seelottery"},{"period":85,"date":"2026-03-26","nums":[14,13,27,33,6,20,19],"source":"seelottery"},{"period":86,"date":"2026-03-27","nums":[15,36,14,24,26,34,12],"source":"seelottery"},{"period":87,"date":"2026-03-28","nums":[17,1,21,29,47,2,26],"source":"seelottery"},{"period":88,"date":"2026-03-29","nums":[16,46,18,10,12,42,27],"source":"seelottery"},{"period":89,"date":"2026-03-30","nums":[26,44,34,5,21,22,49],"source":"seelottery"},{"period":90,"date":"2026-03-31","nums":[48,29,20,17,37,8,36],"source":"seelottery"},{"period":91,"date":"2026-04-01","nums":[8,17,32,5,42,24,37],"source":"seelottery"},{"period":92,"date":"2026-04-02","nums":[46,42,25,47,38,19,6],"source":"seelottery"},{"period":93,"date":"2026-04-03","nums":[13,18,26,47,48,4,40],"source":"seelottery"},{"period":94,"date":"2026-04-04","nums":[16,25,4,28,43,38,17],"source":"seelottery"},{"period":95,"date":"2026-04-05","nums":[15,39,1,38,21,48,35],"source":"seelottery"},{"period":96,"date":"2026-04-06","nums":[35,37,26,5,25,15,43],"source":"seelottery"},{"period":97,"date":"2026-04-07","nums":[28,8,44,26,29,46,11],"source":"seelottery"},{"period":98,"date":"2026-04-08","nums":[24,8,3,14,32,49,17],"source":"seelottery"},{"period":99,"date":"2026-04-09","nums":[10,32,22,18,28,17,12],"source":"seelottery"},{"period":100,"date":"2026-04-10","nums":[24,45,4,32,3,48,33],"source":"seelottery"},{"period":101,"date":"2026-04-11","nums":[22,8,2,34,20,12,39],"source":"seelottery"},{"period":102,"date":"2026-04-12","nums":[47,3,32,46,39,36,20],"source":"seelottery"},{"period":103,"date":"2026-04-13","nums":[34,3,1,30,39,4,6],"source":"seelottery"},{"period":104,"date":"2026-04-14","nums":[20,45,39,49,3,48,1],"source":"seelottery"},{"period":105,"date":"2026-04-15","nums":[32,44,17,19,11,36,28],"source":"seelottery"},{"period":106,"date":"2026-04-16","nums":[31,48,5,11,46,40,22],"source":"seelottery"},{"period":107,"date":"2026-04-17","nums":[35,10,41,43,34,6,49],"source":"seelottery"},{"period":108,"date":"2026-04-18","nums":[6,30,26,14,48,40,45],"source":"seelottery"},{"period":109,"date":"2026-04-19","nums":[38,7,19,24,43,8,16],"source":"seelottery"},{"period":110,"date":"2026-04-20","nums":[40,3,43,29,45,19,30],"source":"seelottery"},{"period":111,"date":"2026-04-21","nums":[24,23,21,41,38,33,1],"source":"seelottery"},{"period":112,"date":"2026-04-22","nums":[15,19,30,7,44,10,9],"source":"seelottery"},{"period":113,"date":"2026-04-23","nums":[42,22,15,17,32,49,2],"source":"seelottery"},{"period":114,"date":"2026-04-24","nums":[45,41,10,1,36,25,30],"source":"seelottery"},{"period":115,"date":"2026-04-25","nums":[21,16,25,29,8,7,4],"source":"seelottery"},{"period":116,"date":"2026-04-26","nums":[15,46,16,10,48,33,22],"source":"seelottery"},{"period":117,"date":"2026-04-27","nums":[45,2,46,33,19,7,16],"source":"seelottery"},{"period":118,"date":"2026-04-28","nums":[38,37,22,46,49,40,8],"source":"seelottery"},{"period":119,"date":"2026-04-29","nums":[38,18,32,22,30,40,11],"source":"seelottery"},{"period":120,"date":"2026-04-30","nums":[18,24,7,23,48,20,6],"source":"seelottery"},{"period":121,"date":"2026-05-01","nums":[45,21,35,48,6,20,44],"source":"seelottery"},{"period":122,"date":"2026-05-02","nums":[18,23,15,22,25,45,1],"source":"seelottery"},{"period":123,"date":"2026-05-03","nums":[39,23,49,17,42,44,46],"source":"seelottery"},{"period":124,"date":"2026-05-04","nums":[46,5,10,17,12,22,39],"source":"seelottery"},{"period":125,"date":"2026-05-05","nums":[16,19,7,30,38,39,31],"source":"seelottery"},{"period":126,"date":"2026-05-06","nums":[15,9,5,3,1,10,49],"source":"seelottery"},{"period":127,"date":"2026-05-07","nums":[14,8,27,3,7,29,45],"source":"seelottery"},{"period":128,"date":"2026-05-08","nums":[25,46,2,7,45,42,37],"source":"seelottery"},{"period":129,"date":"2026-05-09","nums":[34,7,40,21,17,25,41],"source":"seelottery"},{"period":130,"date":"2026-05-10","nums":[41,26,9,11,5,25,29],"source":"seelottery"},{"period":131,"date":"2026-05-11","nums":[12,40,21,32,1,25,7],"source":"seelottery"},{"period":132,"date":"2026-05-12","nums":[48,11,20,44,39,35,30],"source":"seelottery"},{"period":133,"date":"2026-05-13","nums":[38,14,23,1,26,44,7],"source":"seelottery"},{"period":134,"date":"2026-05-14","nums":[24,46,40,44,22,49,37],"source":"seelottery"},{"period":135,"date":"2026-05-15","nums":[8,35,9,20,18,47,30],"source":"seelottery"},{"period":136,"date":"2026-05-16","nums":[1,14,24,17,15,12,48],"source":"seelottery"},{"period":137,"date":"2026-05-17","nums":[24,20,32,5,19,7,26],"source":"seelottery"},{"period":138,"date":"2026-05-18","nums":[38,22,6,24,20,46,49],"source":"seelottery"},{"period":139,"date":"2026-05-19","nums":[41,45,48,1,36,30,24],"source":"seelottery"},{"period":140,"date":"2026-05-20","nums":[13,10,42,4,46,34,16],"source":"seelottery"},{"period":141,"date":"2026-05-21","nums":[43,8,17,2,34,32,33],"source":"seelottery"},{"period":142,"date":"2026-05-22","nums":[45,15,26,21,18,35,23],"source":"seelottery"},{"period":143,"date":"2026-05-23","nums":[13,26,18,32,2,33,44],"source":"seelottery"},{"period":144,"date":"2026-05-24","nums":[47,31,29,33,22,26,43],"source":"seelottery"},{"period":145,"date":"2026-05-25","nums":[36,43,25,32,37,18,5],"source":"seelottery"},{"period":146,"date":"2026-05-26","nums":[11,30,20,19,5,16,42],"source":"seelottery"},{"period":147,"date":"2026-05-27","nums":[29,40,6,18,31,10,13],"source":"seelottery"},{"period":148,"date":"2026-05-28","nums":[28,24,31,23,4,27,48],"source":"seelottery"},{"period":149,"date":"2026-05-29","nums":[28,30,44,45,4,20,27],"source":"seelottery"},{"period":150,"date":"2026-05-30","nums":[11,4,22,25,44,19,9],"source":"seelottery"},{"period":151,"date":"2026-05-31","nums":[27,15,29,42,20,41,31],"source":"seelottery"},{"period":152,"date":"2026-06-01","nums":[34,47,16,36,44,1,45],"source":"seelottery"},{"period":153,"date":"2026-06-02","nums":[1,38,33,28,6,40,41],"source":"seelottery"},{"period":154,"date":"2026-06-03","nums":[46,28,42,31,23,34,41],"source":"seelottery"},{"period":155,"date":"2026-06-04","nums":[21,37,46,13,40,47,7],"source":"seelottery"},{"period":156,"date":"2026-06-05","nums":[31,16,11,3,37,12,1],"source":"seelottery"},{"period":157,"date":"2026-06-06","nums":[43,25,11,31,17,10,40],"source":"seelottery"},{"period":158,"date":"2026-06-07","nums":[43,48,3,1,12,23,16],"source":"seelottery"},{"period":159,"date":"2026-06-08","nums":[12,4,28,17,20,46,39],"source":"seelottery"},{"period":160,"date":"2026-06-09","nums":[8,16,26,1,29,30,2],"source":"seelottery"},{"period":161,"date":"2026-06-10","nums":[36,40,42,19,34,46,8],"source":"seelottery"},{"period":162,"date":"2026-06-11","nums":[23,41,24,26,33,7,32],"source":"seelottery"},{"period":163,"date":"2026-06-12","nums":[39,8,10,33,7,41,37],"source":"seelottery"},{"period":164,"date":"2026-06-13","nums":[46,4,38,12,3,2,21],"source":"seelottery"},{"period":165,"date":"2026-06-14","nums":[11,47,9,49,2,1,3],"source":"seelottery"},{"period":166,"date":"2026-06-15","nums":[20,15,1,4,21,28,6],"source":"seelottery"},{"period":167,"date":"2026-06-16","nums":[23,3,40,39,7,11,19],"source":"seelottery"},{"period":168,"date":"2026-06-17","nums":[27,11,24,5,40,33,15],"source":"seelottery"},{"period":169,"date":"2026-06-18","nums":[44,37,30,8,40,22,24],"source":"seelottery"},{"period":170,"date":"2026-06-19","nums":[27,46,6,38,20,34,3],"source":"seelottery"},{"period":171,"date":"2026-06-20","nums":[24,38,40,31,42,46,28],"source":"seelottery"},{"period":172,"date":"2026-06-21","nums":[28,34,42,37,45,8,44],"source":"seelottery"},{"period":173,"date":"2026-06-22","nums":[39,6,16,40,13,19,26],"source":"seelottery"},{"period":174,"date":"2026-06-23","nums":[15,8,34,13,28,21,41],"source":"seelottery"},{"period":175,"date":"2026-06-24","nums":[7,19,30,29,28,25,26],"source":"seelottery"},{"period":176,"date":"2026-06-25","nums":[30,31,2,36,38,15,10],"source":"seelottery"},{"period":177,"date":"2026-06-26","nums":[19,21,5,1,2,44,14],"source":"seelottery"},{"period":178,"date":"2026-06-27","nums":[26,46,22,44,31,17,18],"source":"seelottery"},{"period":179,"date":"2026-06-28","nums":[10,11,26,6,31,9,15],"source":"seelottery"},{"period":180,"date":"2026-06-29","nums":[14,10,37,30,49,19,21],"source":"seelottery"},{"period":181,"date":"2026-06-30","nums":[17,29,6,34,47,15,19],"source":"seelottery"},{"period":182,"date":"2026-07-01","nums":[15,23,9,45,24,39,41],"source":"seelottery"},{"period":183,"date":"2026-07-02","nums":[23,9,46,37,42,3,24],"source":"seelottery"},{"period":184,"date":"2026-07-03","nums":[44,24,11,36,25,20,1],"source":"seelottery"},{"period":185,"date":"2026-07-04","nums":[18,35,9,41,12,30,36],"source":"seelottery"},{"period":186,"date":"2026-07-05","nums":[17,29,22,1,5,38,23],"source":"seelottery"},{"period":187,"date":"2026-07-06","nums":[23,12,36,38,27,22,1],"source":"seelottery"},{"period":188,"date":"2026-07-07","nums":[38,5,19,10,14,1,16],"source":"seelottery"},{"period":189,"date":"2026-07-08","nums":[45,12,37,20,38,43,15],"source":"seelottery"},{"period":190,"date":"2026-07-09","nums":[46,14,19,37,48,29,16],"source":"seelottery"},{"period":191,"date":"2026-07-10","nums":[19,43,39,24,16,26,29],"source":"seelottery"},{"period":192,"date":"2026-07-11","nums":[27,30,45,8,1,37,25],"source":"seelottery"},{"period":193,"date":"2026-07-12","nums":[2,49,25,11,45,29,9],"source":"seelottery"},{"period":194,"date":"2026-07-13","nums":[30,21,22,15,4,34,26],"source":"seelottery"},{"period":195,"date":"2026-07-14","nums":[46,23,39,4,9,19,25],"source":"seelottery"},{"period":196,"date":"2026-07-15","nums":[3,37,24,10,41,19,39],"source":"seelottery"},{"period":197,"date":"2026-07-16","nums":[40,19,30,48,44,28,8],"source":"seelottery"},{"period":198,"date":"2026-07-17","nums":[48,35,45,21,12,24,7],"source":"seelottery"},{"period":199,"date":"2026-07-18","nums":[17,49,42,45,5,38,36],"source":"seelottery"},{"period":200,"date":"2026-07-19","nums":[43,46,5,32,35,29,39],"source":"seelottery"},{"period":201,"date":"2026-07-20","nums":[46,28,19,38,31,25,32],"source":"seelottery"},{"period":202,"date":"2026-07-21","nums":[21,15,25,47,13,45,40],"source":"seelottery"},{"period":203,"date":"2026-07-22","nums":[12,11,31,3,44,37,25],"source":"seelottery"},{"period":204,"date":"2026-07-23","nums":[11,12,17,26,10,7,5],"source":"seelottery"},{"period":205,"date":"2026-07-24","nums":[30,17,39,12,11,28,3],"source":"seelottery"},{"period":206,"date":"2026-07-25","nums":[9,49,37,3,40,35,47],"source":"seelottery"},{"period":207,"date":"2026-07-26","nums":[9,40,26,23,44,13,31],"source":"seelottery"},{"period":208,"date":"2026-07-27","nums":[7,48,40,35,23,28,19],"source":"seelottery"},{"period":209,"date":"2026-07-28","nums":[44,5,39,14,21,22,8],"source":"seelottery"},{"period":210,"date":"2026-07-29","nums":[40,37,15,17,42,48,49],"source":"seelottery"},{"period":211,"date":"2026-07-30","nums":[13,12,39,37,38,8,1],"source":"seelottery"},{"period":212,"date":"2026-07-31","nums":[43,32,16,39,19,27,6],"source":"seelottery"},{"period":213,"date":"2026-08-01","nums":[9,5,12,22,1,15,35],"source":"seelottery"},{"period":214,"date":"2026-08-02","nums":[29,30,27,38,43,31,4],"source":"seelottery"},{"period":215,"date":"2026-08-03","nums":[19,38,30,13,1,11,14],"source":"seelottery"},{"period":216,"date":"2026-08-04","nums":[18,41,32,44,36,45,37],"source":"seelottery"},{"period":217,"date":"2026-08-05","nums":[34,12,11,30,42,7,26],"source":"seelottery"},{"period":218,"date":"2026-08-06","nums":[2,13,47,38,46,23,17],"source":"seelottery"},{"period":219,"date":"2026-08-07","nums":[31,41,7,8,29,22,43],"source":"seelottery"},{"period":220,"date":"2026-08-08","nums":[27,39,4,12,38,25,48],"source":"seelottery"},{"period":221,"date":"2026-08-09","nums":[24,14,18,48,46,28,1],"source":"seelottery"},{"period":222,"date":"2026-08-10","nums":[49,14,47,27,18,38,26],"source":"seelottery"},{"period":223,"date":"2026-08-11","nums":[21,43,1,38,29,44,23],"source":"seelottery"},{"period":224,"date":"2026-08-12","nums":[25,19,8,49,18,36,9],"source":"seelottery"},{"period":225,"date":"2026-08-13","nums":[7,34,27,10,19,38,1],"source":"seelottery"},{"period":226,"date":"2026-08-14","nums":[1,11,29,38,4,33,17],"source":"seelottery"},{"period":227,"date":"2026-08-15","nums":[23,24,29,7,13,31,16],"source":"seelottery"},{"period":228,"date":"2026-08-16","nums":[38,26,8,6,29,18,23],"source":"seelottery"},{"period":229,"date":"2026-08-17","nums":[11,7,15,13,33,16,38],"source":"seelottery"},{"period":230,"date":"2026-08-18","nums":[28,26,47,14,49,10,16],"source":"seelottery"},{"period":231,"date":"2026-08-19","nums":[39,46,23,11,8,13,20],"source":"seelottery"},{"period":232,"date":"2026-08-20","nums":[29,10,17,4,46,20,42],"source":"seelottery"},{"period":233,"date":"2026-08-21","nums":[18,41,5,49,4,34,7],"source":"seelottery"},{"period":234,"date":"2026-08-22","nums":[25,30,37,19,7,17,39],"source":"seelottery"},{"period":235,"date":"2026-08-23","nums":[27,26,35,17,44,21,32],"source":"seelottery"},{"period":236,"date":"2026-08-24","nums":[26,35,42,9,14,17,11],"source":"seelottery"},{"period":237,"date":"2026-08-25","nums":[47,36,14,6,41,25,12],"source":"seelottery"},{"period":238,"date":"2026-08-26","nums":[35,44,23,4,7,21,17],"source":"seelottery"},{"period":239,"date":"2026-08-27","nums":[47,43,34,17,22,7,5],"source":"seelottery"},{"period":240,"date":"2026-08-28","nums":[2,34,22,26,28,37,27],"source":"seelottery"},{"period":241,"date":"2026-08-29","nums":[29,45,27,21,42,41,49],"source":"seelottery"},{"period":242,"date":"2026-08-30","nums":[29,35,46,32,13,31,9],"source":"seelottery"},{"period":243,"date":"2026-08-31","nums":[42,17,12,46,9,24,21],"source":"seelottery"},{"period":244,"date":"2026-09-01","nums":[9,14,3,17,33,40,46],"source":"seelottery"},{"period":245,"date":"2026-09-02","nums":[22,23,14,2,13,38,18],"source":"seelottery"},{"period":246,"date":"2026-09-03","nums":[22,24,19,10,20,1,30],"source":"seelottery"},{"period":247,"date":"2026-09-04","nums":[3,9,43,29,46,4,40],"source":"seelottery"},{"period":248,"date":"2026-09-05","nums":[43,26,49,39,14,27,20],"source":"seelottery"},{"period":249,"date":"2026-09-06","nums":[41,22,13,36,26,29,23],"source":"seelottery"},{"period":250,"date":"2026-09-07","nums":[10,6,39,47,37,17,14],"source":"seelottery"},{"period":251,"date":"2026-09-08","nums":[9,6,11,25,8,45,30],"source":"seelottery"},{"period":252,"date":"2026-09-09","nums":[33,41,43,13,6,48,22],"source":"seelottery"},{"period":253,"date":"2026-09-10","nums":[5,35,15,28,13,49,16],"source":"seelottery"},{"period":254,"date":"2026-09-11","nums":[26,44,35,6,16,10,2],"source":"seelottery"},{"period":255,"date":"2026-09-12","nums":[36,22,6,47,39,11,44],"source":"seelottery"},{"period":256,"date":"2026-09-13","nums":[40,15,9,37,7,3,1],"source":"seelottery"},{"period":257,"date":"2026-09-14","nums":[8,46,47,39,27,45,7],"source":"seelottery"},{"period":258,"date":"2026-09-15","nums":[3,23,21,35,5,19,46],"source":"seelottery"},{"period":259,"date":"2026-09-16","nums":[43,33,49,36,19,30,22],"source":"seelottery"},{"period":260,"date":"2026-09-17","nums":[25,26,44,32,6,48,20],"source":"seelottery"},{"period":261,"date":"2026-09-18","nums":[6,25,43,46,29,47,24],"source":"seelottery"},{"period":262,"date":"2026-09-19","nums":[38,22,33,47,36,7,30],"source":"seelottery"},{"period":263,"date":"2026-09-20","nums":[44,28,3,2,24,13,9],"source":"seelottery"},{"period":264,"date":"2026-09-21","nums":[10,6,8,31,22,24,21],"source":"seelottery"},{"period":265,"date":"2026-09-22","nums":[5,46,40,23,26,44,49],"source":"seelottery"},{"period":266,"date":"2026-09-23","nums":[38,42,37,29,45,18,8],"source":"seelottery"},{"period":267,"date":"2026-09-24","nums":[16,20,25,22,9,41,40],"source":"seelottery"},{"period":268,"date":"2026-09-25","nums":[48,34,11,21,19,36,40],"source":"seelottery"},{"period":269,"date":"2026-09-26","nums":[19,40,36,5,38,16,22],"source":"seelottery"},{"period":270,"date":"2026-09-27","nums":[39,34,20,24,17,6,19],"source":"seelottery"},{"period":271,"date":"2026-09-28","nums":[25,2,5,22,20,31,35],"source":"seelottery"},{"period":272,"date":"2026-09-29","nums":[43,15,4,6,32,36,2],"source":"seelottery"},{"period":273,"date":"2026-09-30","nums":[30,3,25,28,6,17,5],"source":"seelottery"},{"period":274,"date":"2026-10-01","nums":[12,16,32,5,39,36,33],"source":"seelottery"},{"period":275,"date":"2026-10-02","nums":[42,49,4,47,14,43,17],"source":"seelottery"},{"period":276,"date":"2026-10-03","nums":[2,21,17,40,11,24,14],"source":"用户录入"},{"period":277,"date":"2026-10-04","nums":[41,23,14,31,13,32,11],"source":"用户确认"},{"period":278,"date":"2026-10-05","nums":[6,40,24,29,44,1,2],"source":"补录历史"},{"period":279,"date":"2026-10-06","nums":[29,32,47,38,6,26,10],"source":"补录历史"},{"period":280,"date":"2026-10-07","nums":[1,26,28,29,3,5,15],"source":"补录历史"},{"period":281,"date":"2026-10-08","nums":[22,19,21,32,48,38,10],"source":"补录历史"},{"period":282,"date":"2026-10-09","nums":[44,3,37,46,29,20,23],"source":"补录历史"},{"period":283,"date":"2026-10-10","nums":[35,8,15,6,21,1,18],"source":"补录历史"},{"period":284,"date":"2026-10-11","nums":[4,35,22,48,3,18,32],"source":"补录历史"},{"period":285,"date":"2026-10-12","nums":[46,45,43,39,20,40,19],"source":"补录历史"},{"period":286,"date":"2026-10-13","nums":[37,49,28,8,29,1,24],"source":"补录历史"},{"period":287,"date":"2026-10-14","nums":[19,47,38,35,6,17,8],"source":"补录历史"},{"period":288,"date":"2026-10-15","nums":[14,48,5,17,46,21,25],"source":"补录历史"},{"period":289,"date":"2026-10-16","nums":[12,29,19,28,47,34,38],"source":"补录历史"},{"period":290,"date":"2026-10-17","nums":[8,9,17,15,7,2,40],"source":"补录历史"},{"period":291,"date":"2026-10-18","nums":[32,10,41,38,22,2,17],"source":"补录历史"},{"period":292,"date":"2026-10-19","nums":[39,10,18,23,16,4,36],"source":"用户确认"},{"period":293,"date":"2026-10-20","nums":[38,10,48,49,13,9,5],"source":"用户确认"},{"period":294,"date":"2026-10-21","nums":[29,43,10,2,34,27,28],"source":"用户确认"},{"period":295,"date":"2026-10-22","nums":[22,28,33,17,13,47,25],"source":"用户确认"}];const DEFAULT_WEB=[{"name":"大三巴","items":[{"z":["蛇"],"tag":""},{"z":["猪"],"tag":""},{"z":["羊"],"tag":""}]},{"name":"1492","items":[{"z":["兔"],"tag":""},{"z":["龙","虎"],"tag":""},{"z":["鼠"],"tag":""},{"z":["猴"],"tag":""}]},{"name":"1680","items":[{"z":["羊"],"tag":"必开"},{"z":["马"],"tag":""},{"z":["狗","羊"],"tag":""},{"z":["猪"],"tag":""}]},{"name":"49图库","items":[{"z":["马"],"tag":"必开"},{"z":["狗"],"tag":""},{"z":["马"],"tag":""},{"z":["牛"],"tag":""}]},{"name":"王中王","items":[{"z":["猴"],"tag":""},{"z":["鼠"],"tag":"蛇羊"},{"z":["猴"],"tag":"必开"},{"z":["猴"],"tag":""}]},{"name":"1994","items":[{"z":["虎"],"tag":""},{"z":["狗"],"tag":"第一期"},{"z":["羊"],"tag":""},{"z":["鼠"],"tag":""},{"z":["羊"],"tag":""}]}];const DEFAULT_FORUM=["小麦","兔子先生","科科","独占鳌头","春天（四连胜）","买必赢","莫美琳婷","海锅锅（四连胜）","白浩","R先生","牛大人","芒果","吉吉","中中","大声发","二少（七连胜）","波波写澳码（六连胜）"];const DEFAULT_PLANE=["羊皮卷","平特四字","大漠孤烟","恭喜发财","智慧之光","黄金城","领奖台","巫女","下一方","绝版平特","平特1肖"];const KEY='xinao_summary_v1';let state;let picker=null;const $=id=>document.getElementById(id);const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));const pad=n=>String(n).padStart(2,'0');const emoji=a=>EMOJI[ANIMALS.indexOf(a)]||'＋';function notice(s){$('toast').textContent=s;$('toast').classList.add('show');setTimeout(()=>$('toast').classList.remove('show'),2200)}function baseState(){return {draws:DRAWS.map(d=>({...d,nums:[...d.nums]})),web:DEFAULT_WEB.map((x,i)=>({...x,id:'w'+i,items:x.items.map((it,j)=>({...it,id:'w'+i+'i'+j,z:[...it.z]}))})),forum:DEFAULT_FORUM.map((name,i)=>({id:'f'+i,name,z:[],records:[],initialNote:noteFromName(name)})),plane:DEFAULT_PLANE.map((name,i)=>({id:'p'+i,name,z:[],records:[],initialNote:''}))}}function noteFromName(n){let m=n.match(/（(\d+)连胜）/);return m?`截图标注${m[1]}连胜（仅作初始备注）`:''}function load(){try{let x=JSON.parse(localStorage.getItem(KEY));if(x&&x.draws&&x.web&&x.forum&&x.plane)return x}catch(e){}return baseState()}state=load();function save(){try{localStorage.setItem(KEY,JSON.stringify(state));$('saveState').textContent='● 本地保存'}catch(e){$('saveState').textContent='● 请导出备份'}}function zFor(n,p){return (p>=48?ORDER:['蛇','龙','兔','虎','牛','鼠','猪','狗','鸡','猴','羊','马'])[(n-1)%12]}function openZ(d){return new Set(d.nums.map(n=>zFor(n,d.period)))}function drawFor(p){return state.draws.find(d=>d.period===p)}function nextDrawPeriod(){return Math.max(0,...state.draws.map(d=>d.period))+1}function openPicker(target){picker=target;const obj=target.type==='web'?state.web.find(x=>x.id===target.id).items.find(x=>x.id===target.itemId):state[target.type].find(x=>x.id===target.id);const selected=obj.z||[];$('modalTitle').textContent=target.type==='web'?'选择生肖（可多选）':`选择生肖（${obj.name}）`; $('animalGrid').innerHTML=ANIMALS.map((a,i)=>`<button class="animal-option ${selected.includes(a)?'selected':''}" data-animal="${a}"><span>${EMOJI[i]}</span><span>${a}</span></button>`).join('');$('modalBg').hidden=false}function closePicker(){picker=null;$('modalBg').hidden=true}function getPickerObj(){if(!picker)return null;if(picker.type==='web')return state.web.find(x=>x.id===picker.id).items.find(x=>x.id===picker.itemId);return state[picker.type].find(x=>x.id===picker.id)}function addChoice(type,id,itemId){openPicker({type,id,itemId})}
-function renderWeb(){ $('webList').innerHTML=state.web.map(w=>`<div class="web-row"><div class="web-name"><input class="name-input" data-webname="${w.id}" value="${esc(w.name)}" aria-label="网页名称"><button class="delete" data-delweb="${w.id}" title="删除网页">×</button></div><div class="choices">${w.items.map(it=>`<div class="choice"><button class="animal-btn" data-pickweb="${w.id}" data-item="${it.id}" title="选择生肖">${it.z.length?it.z.map(emoji).join(''):'＋'}</button><input class="tag-input" data-tag="${it.id}" data-web="${w.id}" value="${esc(it.tag||'')}" placeholder="自定义标签"></div>`).join('')}<button class="add-inline" data-additem="${w.id}">＋ 生肖框</button></div></div>`).join('')}
-function runStats(entry,section){const records=entry.records||[];let streak=0,kind=null;for(let i=records.length-1;i>=0;i--){if(kind===null)kind=records[i].hit;if(records[i].hit!==kind)break;streak++}const wins=records.filter(r=>r.hit).length,loss=records.length-wins;return {records,streak,kind,wins,loss}}function renderUsers(type){const list=state[type];$(type+'List').innerHTML=list.map(u=>{const st=runStats(u,type),icons=u.z.length?u.z.map(z=>`<button class="pick" data-pickuser="${u.id}" data-type="${type}" title="点击修改">${emoji(z)}</button>`).join(''):`<button class="pick empty" data-pickuser="${u.id}" data-type="${type}">＋生肖</button>`;const latest=st.records.at(-1);const streakText=st.kind===null?'待设置生肖':`${st.kind?'连胜':'连败'} ${st.streak} 期`;return `<div class="user-row"><div class="user-main"><div class="username">${esc(u.name)}</div><div class="user-sub">${u.initialNote?esc(u.initialNote)+' · ':''}${streakText}</div><div class="stats"><span class="pill hit">胜 ${st.wins}</span><span class="pill miss">负 ${st.loss}</span><span class="pill">已核对 ${st.records.length} 期</span></div><details class="details"><summary>最近战绩 / 展开详情</summary><div class="record-list">${st.records.length?st.records.slice(-30).reverse().map(r=>`<div class="record"><span>${pad(r.period)}期 · ${r.z.join('、')}</span><b style="color:${r.hit?'#21885b':'#c44d59'}">${r.hit?'命中':'未中'}</b></div>`).join(''):'尚无自动核对记录。新增生肖并录入下一期结果后开始累计。'}</div></details></div><div class="picks">${icons}<button class="delete" data-deluser="${u.id}" data-type="${type}" title="删除用户">×</button></div></div>`}).join('')}
-function tally(){let cnt=Object.fromEntries(ANIMALS.map(a=>[a,{web:0,forum:0,plane:0,total:0}]));state.web.forEach(w=>w.items.forEach(it=>it.z.forEach(a=>{cnt[a].web++;cnt[a].total++})));state.forum.forEach(u=>u.z.forEach(a=>{cnt[a].forum++;cnt[a].total++}));state.plane.forEach(u=>u.z.forEach(a=>{cnt[a].plane++;cnt[a].total++}));return Object.entries(cnt).map(([a,c])=>({a,...c})).sort((a,b)=>b.total-a.total||ANIMALS.indexOf(a.a)-ANIMALS.indexOf(b.a))}function renderRanking(){$('ranking').innerHTML=tally().map((x,i)=>`<div class="rank-row"><span class="rank-no">${String(i+1).padStart(2,'0')}</span><span class="rank-emoji">${emoji(x.a)}</span><div><div class="rank-name">${x.a}</div><div class="user-sub">网页 ${x.web} · 论坛 ${x.forum} · 飞机 ${x.plane}</div></div><div class="rank-count">${x.total}<small>${x.web}/${x.forum}/${x.plane}</small></div></div>`).join('')}
-function renderHistory(){const rows=[...state.draws].sort((a,b)=>b.period-a.period);$('historyCount').textContent=`${state.draws.length}条记录 · 最新${Math.max(...state.draws.map(d=>d.period))}期`;$('historyList').innerHTML=rows.map(d=>`<div class="hist-row"><div class="hist-head"><span>${pad(d.period)}期 · ${d.date||''}</span><span>${[...openZ(d)].join('、')}</span></div><div class="nums">${d.nums.map((n,i)=>`<span class="num ${RED.has(n)?'red':BLUE.has(n)?'blue':''} ${i===6?'special':''}">${pad(n)}</span>`).join('')}</div></div>`).join('')}
-function refresh(){renderWeb();renderUsers('forum');renderUsers('plane');renderRanking();renderHistory();const d=state.draws.at(-1);$('latestInfo').textContent=`已录入至${pad(d.period)}期 · ${state.draws.length}期记录`;const np=nextDrawPeriod();$('periodInput').value=np;$('numsInput').value='';save()}function tick(){const d=new Date();$('date').textContent=`${d.getFullYear()}年${d.getMonth()+1}月${d.getDate()}日`; $('clock').textContent=[d.getHours(),d.getMinutes(),d.getSeconds()].map(pad).join(':');$('weekday').textContent=['星期日','星期一','星期二','星期三','星期四','星期五','星期六'][d.getDay()];$('todayPeriod').textContent=String(Math.floor((new Date(d.getFullYear(),d.getMonth(),d.getDate())-new Date(d.getFullYear(),0,1))/86400000)+1).padStart(3,'0')}
-function evaluateDraw(d){const opened=openZ(d);['forum','plane'].forEach(type=>state[type].forEach(u=>{if(!u.z.length)return;const hit=u.z.some(z=>opened.has(z));if(!(u.records||[]).some(r=>r.period===d.period)){u.records=u.records||[];u.records.push({period:d.period,z:[...u.z],hit});u.records.sort((a,b)=>a.period-b.period)}}))}
-$('webList').addEventListener('click',e=>{let b=e.target.closest('[data-pickweb]');if(b){addChoice('web',b.dataset.pickweb,b.dataset.item);return}b=e.target.closest('[data-additem]');if(b){const w=state.web.find(x=>x.id===b.dataset.additem);w.items.push({id:'i'+Date.now(),z:[],tag:''});save();renderWeb();renderRanking();return}b=e.target.closest('[data-delweb]');if(b&&confirm('删除这个网页及其所有生肖记录？')){state.web=state.web.filter(w=>w.id!==b.dataset.delweb);save();refresh()}});$('webList').addEventListener('change',e=>{if(e.target.dataset.webname){const w=state.web.find(w=>w.id===e.target.dataset.webname);if(w)w.name=e.target.value.trim()||'未命名网页';save();renderRanking()}if(e.target.dataset.tag!==undefined){const w=state.web.find(w=>w.id===e.target.dataset.web);const it=w?.items.find(i=>i.id===e.target.dataset.tag);if(it){it.tag=e.target.value;save()}}});$('addWeb').onclick=()=>{state.web.push({id:'w'+Date.now(),name:'新网页',items:[{id:'i'+Date.now(),z:[],tag:''}]});save();refresh()};['forum','plane'].forEach(type=>{$(type+'List').addEventListener('click',e=>{const p=e.target.closest('[data-pickuser]');if(p){addChoice(type,p.dataset.id);return}const d=e.target.closest('[data-deluser]');if(d&&confirm('删除该用户？')){state[type]=state[type].filter(u=>u.id!==d.dataset.deluser);save();refresh()}});$('add'+(type==='forum'?'Forum':'Plane')).onclick=()=>{const input=$(type+'NewName'),name=input.value.trim();if(!name){notice('请输入用户名');return}state[type].push({id:type[0]+Date.now(),name,z:[],records:[],initialNote:''});input.value='';save();refresh()}});$('animalGrid').addEventListener('click',e=>{const b=e.target.closest('[data-animal]');if(!b)return;const obj=getPickerObj();if(!obj)return;const a=b.dataset.animal;obj.z=obj.z||[];if(obj.z.includes(a))obj.z=obj.z.filter(x=>x!==a);else if(picker.type==='web'&&obj.z.length<3)obj.z.push(a);else if(picker.type!=='web'&&obj.z.length<3)obj.z.push(a);$('animalGrid').querySelectorAll('[data-animal]').forEach(x=>x.classList.toggle('selected',obj.z.includes(x.dataset.animal)));});$('modalClear').onclick=()=>{const obj=getPickerObj();if(obj)obj.z=[];$('animalGrid').querySelectorAll('[data-animal]').forEach(x=>x.classList.remove('selected'))};$('modalSave').onclick=()=>{const t=picker?.type;closePicker();save();if(t==='web'){renderWeb();renderRanking()}else{renderUsers(t);renderRanking()}};$('modalClose').onclick=closePicker;$('modalBg').addEventListener('click',e=>{if(e.target===$('modalBg'))closePicker()});
-$('clearAllZodiac').onclick=()=>{if(!confirm('确定清空网页、论坛、飞机三个版块中所有已选择的生肖？\n网页名称、自定义标签、用户名、历史开奖结果以及论坛/飞机累计战绩都会保留。此操作无法撤销，建议先导出备份。'))return;state.web.forEach(w=>w.items.forEach(it=>it.z=[]));['forum','plane'].forEach(type=>state[type].forEach(u=>{u.z=[]}));save();refresh();notice('已清空所有已添加生肖，累计战绩已保留')};
-$('resultForm').addEventListener('submit',e=>{e.preventDefault();const p=Number($('periodInput').value),nums=($('numsInput').value.match(/\d{1,2}/g)||[]).map(Number);if(!Number.isInteger(p)||p<1||p>365||nums.length!==7||nums.some(n=>n<1||n>49)||new Set(nums).size!==7){notice('请输入有效期号和7个不重复的01—49号码');return}const existing=drawFor(p);if(existing&&!confirm(`第${p}期已有记录，确认覆盖？`))return;const d={period:p,date:(()=>{const y=new Date().getFullYear();const d=new Date(y,0,p);return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`})(),nums,source:'用户录入'};state.draws=state.draws.filter(x=>x.period!==p);state.draws.push(d);state.draws.sort((a,b)=>a.period-b.period);evaluateDraw(d);save();refresh();notice(`第${p}期已保存，已自动核对论坛/飞机生肖`) });$('exportBtn').onclick=()=>{const blob=new Blob([JSON.stringify(state,null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='新澳汇总备份.json';a.click();URL.revokeObjectURL(a.href)};$('importBtn').onclick=()=>$('importFile').click();$('importFile').onchange=async e=>{try{const x=JSON.parse(await e.target.files[0].text());if(!x.draws||!x.web||!x.forum||!x.plane)throw Error();state=x;save();refresh();notice('备份导入成功')}catch{notice('备份文件格式不正确')}e.target.value=''};
-// 不对旧开奖记录倒推用户此前未提供的选择；从后续新增开奖结果起自动累计战绩。
-['forum','plane'].forEach(type=>state[type].forEach(u=>{u.records=u.records||[]}));refresh();tick();setInterval(tick,1000);
-</script><script>if('serviceWorker' in navigator && (location.protocol==='https:'||location.hostname==='localhost')){window.addEventListener('load',()=>navigator.serviceWorker.register('./service-worker.js').catch(()=>{}));}</script></body></html>
+const ANIMALS=['鼠','牛','虎','兔','龙','蛇','马','羊','猴','鸡','狗','猪'];
+const EMOJI=['🐭','🐮','🐯','🐰','🐲','🐍','🐴','🐑','🐵','🐔','🐶','🐷'];
+const ORDER=['马','蛇','龙','兔','虎','牛','鼠','猪','狗','鸡','猴','羊'];
+const RED=new Set([1,2,7,8,12,13,18,19,23,24,29,30,34,35,40,45,46]);
+const BLUE=new Set([3,4,9,10,14,15,20,25,26,31,36,37,41,42,47,48]);
+const DRAWS=[{"period":48,"date":"2026-02-17","nums":[8,38,29,32,46,16,24],"source":"seelottery"},{"period":49,"date":"2026-02-18","nums":[28,42,22,49,12,31,13],"source":"seelottery"},{"period":50,"date":"2026-02-19","nums":[10,13,30,37,33,44,23],"source":"seelottery"},{"period":51,"date":"2026-02-20","nums":[40,42,44,6,14,38,1],"source":"seelottery"},{"period":52,"date":"2026-02-21","nums":[15,46,14,13,40,35,38],"source":"seelottery"},{"period":53,"date":"2026-02-22","nums":[16,12,33,17,41,18,15],"source":"seelottery"},{"period":54,"date":"2026-02-23","nums":[37,30,11,19,49,32,48],"source":"seelottery"},{"period":55,"date":"2026-02-24","nums":[31,28,20,21,39,9,14],"source":"seelottery"},{"period":56,"date":"2026-02-25","nums":[45,9,6,7,10,26,48],"source":"seelottery"},{"period":57,"date":"2026-02-26","nums":[21,29,40,30,26,34,23],"source":"seelottery"},{"period":58,"date":"2026-02-27","nums":[20,38,13,21,33,40,31],"source":"seelottery"},{"period":59,"date":"2026-02-28","nums":[29,19,24,43,28,12,10],"source":"seelottery"},{"period":60,"date":"2026-03-01","nums":[5,27,40,34,39,1,9],"source":"seelottery"},{"period":61,"date":"2026-03-02","nums":[46,17,8,25,2,37,29],"source":"seelottery"},{"period":62,"date":"2026-03-03","nums":[46,29,6,49,35,42,24],"source":"seelottery"},{"period":63,"date":"2026-03-04","nums":[36,26,37,2,44,31,28],"source":"seelottery"},{"period":64,"date":"2026-03-05","nums":[8,23,40,44,34,2,18],"source":"seelottery"},{"period":65,"date":"2026-03-06","nums":[2,45,17,38,33,24,5],"source":"seelottery"},{"period":66,"date":"2026-03-07","nums":[24,20,36,44,2,28,37],"source":"seelottery"},{"period":67,"date":"2026-03-08","nums":[15,30,6,1,26,9,5],"source":"seelottery"},{"period":68,"date":"2026-03-09","nums":[49,2,1,26,38,21,23],"source":"seelottery"},{"period":69,"date":"2026-03-10","nums":[23,16,10,34,8,36,24],"source":"seelottery"},{"period":70,"date":"2026-03-11","nums":[47,17,23,10,41,7,25],"source":"seelottery"},{"period":71,"date":"2026-03-12","nums":[44,30,25,5,41,8,48],"source":"seelottery"},{"period":72,"date":"2026-03-13","nums":[12,28,1,42,25,44,46],"source":"seelottery"},{"period":73,"date":"2026-03-14","nums":[7,29,1,33,36,14,34],"source":"seelottery"},{"period":74,"date":"2026-03-15","nums":[12,31,49,25,24,32,10],"source":"seelottery"},{"period":75,"date":"2026-03-16","nums":[19,22,26,20,41,27,33],"source":"seelottery"},{"period":76,"date":"2026-03-17","nums":[12,7,24,22,3,41,2],"source":"seelottery"},{"period":77,"date":"2026-03-18","nums":[37,32,46,25,39,30,29],"source":"seelottery"},{"period":78,"date":"2026-03-19","nums":[18,17,10,33,2,8,46],"source":"seelottery"},{"period":79,"date":"2026-03-20","nums":[49,34,6,20,4,43,35],"source":"seelottery"},{"period":80,"date":"2026-03-21","nums":[21,18,17,48,9,42,3],"source":"seelottery"},{"period":81,"date":"2026-03-22","nums":[4,36,14,15,35,41,17],"source":"seelottery"},{"period":82,"date":"2026-03-23","nums":[3,21,33,37,41,25,27],"source":"seelottery"},{"period":83,"date":"2026-03-24","nums":[46,8,23,36,30,1,5],"source":"seelottery"},{"period":84,"date":"2026-03-25","nums":[7,24,2,5,20,31,16],"source":"seelottery"},{"period":85,"date":"2026-03-26","nums":[14,13,27,33,6,20,19],"source":"seelottery"},{"period":86,"date":"2026-03-27","nums":[15,36,14,24,26,34,12],"source":"seelottery"},{"period":87,"date":"2026-03-28","nums":[17,1,21,29,47,2,26],"source":"seelottery"},{"period":88,"date":"2026-03-29","nums":[16,46,18,10,12,42,27],"source":"seelottery"},{"period":89,"date":"2026-03-30","nums":[26,44,34,5,21,22,49],"source":"seelottery"},{"period":90,"date":"2026-03-31","nums":[48,29,20,17,37,8,36],"source":"seelottery"},{"period":91,"date":"2026-04-01","nums":[8,17,32,5,42,24,37],"source":"seelottery"},{"period":92,"date":"2026-04-02","nums":[46,42,25,47,38,19,6],"source":"seelottery"},{"period":93,"date":"2026-04-03","nums":[13,18,26,47,48,4,40],"source":"seelottery"},{"period":94,"date":"2026-04-04","nums":[16,25,4,28,43,38,17],"source":"seelottery"},{"period":95,"date":"2026-04-05","nums":[15,39,1,38,21,48,35],"source":"seelottery"},{"period":96,"date":"2026-04-06","nums":[35,37,26,5,25,15,43],"source":"seelottery"},{"period":97,"date":"2026-04-07","nums":[28,8,44,26,29,46,11],"source":"seelottery"},{"period":98,"date":"2026-04-08","nums":[24,8,3,14,32,49,17],"source":"seelottery"},{"period":99,"date":"2026-04-09","nums":[10,32,22,18,28,17,12],"source":"seelottery"},{"period":100,"date":"2026-04-10","nums":[24,45,4,32,3,48,33],"source":"seelottery"},{"period":101,"date":"2026-04-11","nums":[22,8,2,34,20,12,39],"source":"seelottery"},{"period":102,"date":"2026-04-12","nums":[47,3,32,46,39,36,20],"source":"seelottery"},{"period":103,"date":"2026-04-13","nums":[34,3,1,30,39,4,6],"source":"seelottery"},{"period":104,"date":"2026-04-14","nums":[20,45,39,49,3,48,1],"source":"seelottery"},{"period":105,"date":"2026-04-15","nums":[32,44,17,19,11,36,28],"source":"seelottery"},{"period":106,"date":"2026-04-16","nums":[31,48,5,11,46,40,22],"source":"seelottery"},{"period":107,"date":"2026-04-17","nums":[35,10,41,43,34,6,49],"source":"seelottery"},{"period":108,"date":"2026-04-18","nums":[6,30,26,14,48,40,45],"source":"seelottery"},{"period":109,"date":"2026-04-19","nums":[38,7,19,24,43,8,16],"source":"seelottery"},{"period":110,"date":"2026-04-20","nums":[40,3,43,29,45,19,30],"source":"seelottery"},{"period":111,"date":"2026-04-21","nums":[24,23,21,41,38,33,1],"source":"seelottery"},{"period":112,"date":"2026-04-22","nums":[15,19,30,7,44,10,9],"source":"seelottery"},{"period":113,"date":"2026-04-23","nums":[42,22,15,17,32,49,2],"source":"seelottery"},{"period":114,"date":"2026-04-24","nums":[45,41,10,1,36,25,30],"source":"seelottery"},{"period":115,"date":"2026-04-25","nums":[21,16,25,29,8,7,4],"source":"seelottery"},{"period":116,"date":"2026-04-26","nums":[15,46,16,10,48,33,22],"source":"seelottery"},{"period":117,"date":"2026-04-27","nums":[45,2,46,33,19,7,16],"source":"seelottery"},{"period":118,"date":"2026-04-28","nums":[38,37,22,46,49,40,8],"source":"seelottery"},{"period":119,"date":"2026-04-29","nums":[38,18,32,22,30,40,11],"source":"seelottery"},{"period":120,"date":"2026-04-30","nums":[18,24,7,23,48,20,6],"source":"seelottery"},{"period":121,"date":"2026-05-01","nums":[45,21,35,48,6,20,44],"source":"seelottery"},{"period":122,"date":"2026-05-02","nums":[18,23,15,22,25,45,1],"source":"seelottery"},{"period":123,"date":"2026-05-03","nums":[39,23,49,17,42,44,46],"source":"seelottery"},{"period":124,"date":"2026-05-04","nums":[46,5,10,17,12,22,39],"source":"seelottery"},{"period":125,"date":"2026-05-05","nums":[16,19,7,30,38,39,31],"source":"seelottery"},{"period":126,"date":"2026-05-06","nums":[15,9,5,3,1,10,49],"source":"seelottery"},{"period":127,"date":"2026-05-07","nums":[14,8,27,3,7,29,45],"source":"seelottery"},{"period":128,"date":"2026-05-08","nums":[25,46,2,7,45,42,37],"source":"seelottery"},{"period":129,"date":"2026-05-09","nums":[34,7,40,21,17,25,41],"source":"seelottery"},{"period":130,"date":"2026-05-10","nums":[41,26,9,11,5,25,29],"source":"seelottery"},{"period":131,"date":"2026-05-11","nums":[12,40,21,32,1,25,7],"source":"seelottery"},{"period":132,"date":"2026-05-12","nums":[48,11,20,44,39,35,30],"source":"seelottery"},{"period":133,"date":"2026-05-13","nums":[38,14,23,1,26,44,7],"source":"seelottery"},{"period":134,"date":"2026-05-14","nums":[24,46,40,44,22,49,37],"source":"seelottery"},{"period":135,"date":"2026-05-15","nums":[8,35,9,20,18,47,30],"source":"seelottery"},{"period":136,"date":"2026-05-16","nums":[1,14,24,17,15,12,48],"source":"seelottery"},{"period":137,"date":"2026-05-17","nums":[24,20,32,5,19,7,26],"source":"seelottery"},{"period":138,"date":"2026-05-18","nums":[38,22,6,24,20,46,49],"source":"seelottery"},{"period":139,"date":"2026-05-19","nums":[41,45,48,1,36,30,24],"source":"seelottery"},{"period":140,"date":"2026-05-20","nums":[13,10,42,4,46,34,16],"source":"seelottery"},{"period":141,"date":"2026-05-21","nums":[43,8,17,2,34,32,33],"source":"seelottery"},{"period":142,"date":"2026-05-22","nums":[45,15,26,21,18,35,23],"source":"seelottery"},{"period":143,"date":"2026-05-23","nums":[13,26,18,32,2,33,44],"source":"seelottery"},{"period":144,"date":"2026-05-24","nums":[47,31,29,33,22,26,43],"source":"seelottery"},{"period":145,"date":"2026-05-25","nums":[36,43,25,32,37,18,5],"source":"seelottery"},{"period":146,"date":"2026-05-26","nums":[11,30,20,19,5,16,42],"source":"seelottery"},{"period":147,"date":"2026-05-27","nums":[29,40,6,18,31,10,13],"source":"seelottery"},{"period":148,"date":"2026-05-28","nums":[28,24,31,23,4,27,48],"source":"seelottery"},{"period":149,"date":"2026-05-29","nums":[28,30,44,45,4,20,27],"source":"seelottery"},{"period":150,"date":"2026-05-30","nums":[11,4,22,25,44,19,9],"source":"seelottery"},{"period":151,"date":"2026-05-31","nums":[27,15,29,42,20,41,31],"source":"seelottery"},{"period":152,"date":"2026-06-01","nums":[34,47,16,36,44,1,45],"source":"seelottery"},{"period":153,"date":"2026-06-02","nums":[1,38,33,28,6,40,41],"source":"seelottery"},{"period":154,"date":"2026-06-03","nums":[46,28,42,31,23,34,41],"source":"seelottery"},{"period":155,"date":"2026-06-04","nums":[21,37,46,13,40,47,7],"source":"seelottery"},{"period":156,"date":"2026-06-05","nums":[31,16,11,3,37,12,1],"source":"seelottery"},{"period":157,"date":"2026-06-06","nums":[43,25,11,31,17,10,40],"source":"seelottery"},{"period":158,"date":"2026-06-07","nums":[43,48,3,1,12,23,16],"source":"seelottery"},{"period":159,"date":"2026-06-08","nums":[12,4,28,17,20,46,39],"source":"seelottery"},{"period":160,"date":"2026-06-09","nums":[8,16,26,1,29,30,2],"source":"seelottery"},{"period":161,"date":"2026-06-10","nums":[36,40,42,19,34,46,8],"source":"seelottery"},{"period":162,"date":"2026-06-11","nums":[23,41,24,26,33,7,32],"source":"seelottery"},{"period":163,"date":"2026-06-12","nums":[39,8,10,33,7,41,37],"source":"seelottery"},{"period":164,"date":"2026-06-13","nums":[46,4,38,12,3,2,21],"source":"seelottery"},{"period":165,"date":"2026-06-14","nums":[11,47,9,49,2,1,3],"source":"seelottery"},{"period":166,"date":"2026-06-15","nums":[20,15,1,4,21,28,6],"source":"seelottery"},{"period":167,"date":"2026-06-16","nums":[23,3,40,39,7,11,19],"source":"seelottery"},{"period":168,"date":"2026-06-17","nums":[27,11,24,5,40,33,15],"source":"seelottery"},{"period":169,"date":"2026-06-18","nums":[44,37,30,8,40,22,24],"source":"seelottery"},{"period":170,"date":"2026-06-19","nums":[27,46,6,38,20,34,3],"source":"seelottery"},{"period":171,"date":"2026-06-20","nums":[24,38,40,31,42,46,28],"source":"seelottery"},{"period":172,"date":"2026-06-21","nums":[28,34,42,37,45,8,44],"source":"seelottery"},{"period":173,"date":"2026-06-22","nums":[39,6,16,40,13,19,26],"source":"seelottery"},{"period":174,"date":"2026-06-23","nums":[15,8,34,13,28,21,41],"source":"seelottery"},{"period":175,"date":"2026-06-24","nums":[7,19,30,29,28,25,26],"source":"seelottery"},{"period":176,"date":"2026-06-25","nums":[30,31,2,36,38,15,10],"source":"seelottery"},{"period":177,"date":"2026-06-26","nums":[19,21,5,1,2,44,14],"source":"seelottery"},{"period":178,"date":"2026-06-27","nums":[26,46,22,44,31,17,18],"source":"seelottery"},{"period":179,"date":"2026-06-28","nums":[10,11,26,6,31,9,15],"source":"seelottery"},{"period":180,"date":"2026-06-29","nums":[14,10,37,30,49,19,21],"source":"seelottery"},{"period":181,"date":"2026-06-30","nums":[17,29,6,34,47,15,19],"source":"seelottery"},{"period":182,"date":"2026-07-01","nums":[15,23,9,45,24,39,41],"source":"seelottery"},{"period":183,"date":"2026-07-02","nums":[23,9,46,37,42,3,24],"source":"seelottery"},{"period":184,"date":"2026-07-03","nums":[44,24,11,36,25,20,1],"source":"seelottery"},{"period":185,"date":"2026-07-04","nums":[18,35,9,41,12,30,36],"source":"seelottery"},{"period":186,"date":"2026-07-05","nums":[17,29,22,1,5,38,23],"source":"seelottery"},{"period":187,"date":"2026-07-06","nums":[23,12,36,38,27,22,1],"source":"seelottery"},{"period":188,"date":"2026-07-07","nums":[38,5,19,10,14,1,16],"source":"seelottery"},{"period":189,"date":"2026-07-08","nums":[45,12,37,20,38,43,15],"source":"seelottery"},{"period":190,"date":"2026-07-09","nums":[46,14,19,37,48,29,16],"source":"seelottery"},{"period":191,"date":"2026-07-10","nums":[19,43,39,24,16,26,29],"source":"seelottery"},{"period":192,"date":"2026-07-11","nums":[27,30,45,8,1,37,25],"source":"seelottery"},{"period":193,"date":"2026-07-12","nums":[2,49,25,11,45,29,9],"source":"seelottery"},{"period":194,"date":"2026-07-13","nums":[30,21,22,15,4,34,26],"source":"seelottery"},{"period":195,"date":"2026-07-14","nums":[46,23,39,4,9,19,25],"source":"seelottery"},{"period":196,"date":"2026-07-15","nums":[3,37,24,10,41,19,39],"source":"seelottery"},{"period":197,"date":"2026-07-16","nums":[40,19,30,48,44,28,8],"source":"seelottery"},{"period":198,"date":"2026-07-17","nums":[48,35,45,21,12,24,7],"source":"seelottery"},{"period":199,"date":"2026-07-18","nums":[17,49,42,45,5,38,36],"source":"seelottery"},{"period":200,"date":"2026-07-19","nums":[43,46,5,32,35,29,39],"source":"seelottery"},{"period":201,"date":"2026-07-20","nums":[46,28,19,38,31,25,32],"source":"seelottery"},{"period":202,"date":"2026-07-21","nums":[21,15,25,47,13,45,40],"source":"seelottery"},{"period":203,"date":"2026-07-22","nums":[12,11,31,3,44,37,25],"source":"seelottery"},{"period":204,"date":"2026-07-23","nums":[11,12,17,26,10,7,5],"source":"seelottery"},{"period":205,"date":"2026-07-24","nums":[30,17,39,12,11,28,3],"source":"seelottery"},{"period":206,"date":"2026-07-25","nums":[9,49,37,3,40,35,47],"source":"seelottery"},{"period":207,"date":"2026-07-26","nums":[9,40,26,23,44,13,31],"source":"seelottery"},{"period":208,"date":"2026-07-27","nums":[7,48,40,35,23,28,19],"source":"seelottery"},{"period":209,"date":"2026-07-28","nums":[44,5,39,14,21,22,8],"source":"seelottery"},{"period":210,"date":"2026-07-29","nums":[40,37,15,17,42,48,49],"source":"seelottery"},{"period":211,"date":"2026-07-30","nums":[13,12,39,37,38,8,1],"source":"seelottery"},{"period":212,"date":"2026-07-31","nums":[43,32,16,39,19,27,6],"source":"seelottery"},{"period":213,"date":"2026-08-01","nums":[9,5,12,22,1,15,35],"source":"seelottery"},{"period":214,"date":"2026-08-02","nums":[29,30,27,38,43,31,4],"source":"seelottery"},{"period":215,"date":"2026-08-03","nums":[19,38,30,13,1,11,14],"source":"seelottery"},{"period":216,"date":"2026-08-04","nums":[18,41,32,44,36,45,37],"source":"seelottery"},{"period":217,"date":"2026-08-05","nums":[34,12,11,30,42,7,26],"source":"seelottery"},{"period":218,"date":"2026-08-06","nums":[2,13,47,38,46,23,17],"source":"seelottery"},{"period":219,"date":"2026-08-07","nums":[31,41,7,8,29,22,43],"source":"seelottery"},{"period":220,"date":"2026-08-08","nums":[27,39,4,12,38,25,48],"source":"seelottery"},{"period":221,"date":"2026-08-09","nums":[24,14,18,48,46,28,1],"source":"seelottery"},{"period":222,"date":"2026-08-10","nums":[49,14,47,27,18,38,26],"source":"seelottery"},{"period":223,"date":"2026-08-11","nums":[21,43,1,38,29,44,23],"source":"seelottery"},{"period":224,"date":"2026-08-12","nums":[25,19,8,49,18,36,9],"source":"seelottery"},{"period":225,"date":"2026-08-13","nums":[7,34,27,10,19,38,1],"source":"seelottery"},{"period":226,"date":"2026-08-14","nums":[1,11,29,38,4,33,17],"source":"seelottery"},{"period":227,"date":"2026-08-15","nums":[23,24,29,7,13,31,16],"source":"seelottery"},{"period":228,"date":"2026-08-16","nums":[38,26,8,6,29,18,23],"source":"seelottery"},{"period":229,"date":"2026-08-17","nums":[11,7,15,13,33,16,38],"source":"seelottery"},{"period":230,"date":"2026-08-18","nums":[28,26,47,14,49,10,16],"source":"seelottery"},{"period":231,"date":"2026-08-19","nums":[39,46,23,11,8,13,20],"source":"seelottery"},{"period":232,"date":"2026-08-20","nums":[29,10,17,4,46,20,42],"source":"seelottery"},{"period":233,"date":"2026-08-21","nums":[18,41,5,49,4,34,7],"source":"seelottery"},{"period":234,"date":"2026-08-22","nums":[25,30,37,19,7,17,39],"source":"seelottery"},{"period":235,"date":"2026-08-23","nums":[27,26,35,17,44,21,32],"source":"seelottery"},{"period":236,"date":"2026-08-24","nums":[26,35,42,9,14,17,11],"source":"seelottery"},{"period":237,"date":"2026-08-25","nums":[47,36,14,6,41,25,12],"source":"seelottery"},{"period":238,"date":"2026-08-26","nums":[35,44,23,4,7,21,17],"source":"seelottery"},{"period":239,"date":"2026-08-27","nums":[47,43,34,17,22,7,5],"source":"seelottery"},{"period":240,"date":"2026-08-28","nums":[2,34,22,26,28,37,27],"source":"seelottery"},{"period":241,"date":"2026-08-29","nums":[29,45,27,21,42,41,49],"source":"seelottery"},{"period":242,"date":"2026-08-30","nums":[29,35,46,32,13,31,9],"source":"seelottery"},{"period":243,"date":"2026-08-31","nums":[42,17,12,46,9,24,21],"source":"seelottery"},{"period":244,"date":"2026-09-01","nums":[9,14,3,17,33,40,46],"source":"seelottery"},{"period":245,"date":"2026-09-02","nums":[22,23,14,2,13,38,18],"source":"seelottery"},{"period":246,"date":"2026-09-03","nums":[22,24,19,10,20,1,30],"source":"seelottery"},{"period":247,"date":"2026-09-04","nums":[3,9,43,29,46,4,40],"source":"seelottery"},{"period":248,"date":"2026-09-05","nums":[43,26,49,39,14,27,20],"source":"seelottery"},{"period":249,"date":"2026-09-06","nums":[41,22,13,36,26,29,23],"source":"seelottery"},{"period":250,"date":"2026-09-07","nums":[10,6,39,47,37,17,14],"source":"seelottery"},{"period":251,"date":"2026-09-08","nums":[9,6,11,25,8,45,30],"source":"seelottery"},{"period":252,"date":"2026-09-09","nums":[33,41,43,13,6,48,22],"source":"seelottery"},{"period":253,"date":"2026-09-10","nums":[5,35,15,28,13,49,16],"source":"seelottery"},{"period":254,"date":"2026-09-11","nums":[26,44,35,6,16,10,2],"source":"seelottery"},{"period":255,"date":"2026-09-12","nums":[36,22,6,47,39,11,44],"source":"seelottery"},{"period":256,"date":"2026-09-13","nums":[40,15,9,37,7,3,1],"source":"seelottery"},{"period":257,"date":"2026-09-14","nums":[8,46,47,39,27,45,7],"source":"seelottery"},{"period":258,"date":"2026-09-15","nums":[3,23,21,35,5,19,46],"source":"seelottery"},{"period":259,"date":"2026-09-16","nums":[43,33,49,36,19,30,22],"source":"seelottery"},{"period":260,"date":"2026-09-17","nums":[25,26,44,32,6,48,20],"source":"seelottery"},{"period":261,"date":"2026-09-18","nums":[6,25,43,46,29,47,24],"source":"seelottery"},{"period":262,"date":"2026-09-19","nums":[38,22,33,47,36,7,30],"source":"seelottery"},{"period":263,"date":"2026-09-20","nums":[44,28,3,2,24,13,9],"source":"seelottery"},{"period":264,"date":"2026-09-21","nums":[10,6,8,31,22,24,21],"source":"seelottery"},{"period":265,"date":"2026-09-22","nums":[5,46,40,23,26,44,49],"source":"seelottery"},{"period":266,"date":"2026-09-23","nums":[38,42,37,29,45,18,8],"source":"seelottery"},{"period":267,"date":"2026-09-24","nums":[16,20,25,22,9,41,40],"source":"seelottery"},{"period":268,"date":"2026-09-25","nums":[48,34,11,21,19,36,40],"source":"seelottery"},{"period":269,"date":"2026-09-26","nums":[19,40,36,5,38,16,22],"source":"seelottery"},{"period":270,"date":"2026-09-27","nums":[39,34,20,24,17,6,19],"source":"seelottery"},{"period":271,"date":"2026-09-28","nums":[25,2,5,22,20,31,35],"source":"seelottery"},{"period":272,"date":"2026-09-29","nums":[43,15,4,6,32,36,2],"source":"seelottery"},{"period":273,"date":"2026-09-30","nums":[30,3,25,28,6,17,5],"source":"seelottery"},{"period":274,"date":"2026-10-01","nums":[12,16,32,5,39,36,33],"source":"seelottery"},{"period":275,"date":"2026-10-02","nums":[42,49,4,47,14,43,17],"source":"seelottery"},{"period":276,"date":"2026-10-03","nums":[2,21,17,40,11,24,14],"source":"用户录入"},{"period":277,"date":"2026-10-04","nums":[41,23,14,31,13,32,11],"source":"用户确认"},{"period":278,"date":"2026-10-05","nums":[6,40,24,29,44,1,2],"source":"补录历史"},{"period":279,"date":"2026-10-06","nums":[29,32,47,38,6,26,10],"source":"补录历史"},{"period":280,"date":"2026-10-07","nums":[1,26,28,29,3,5,15],"source":"补录历史"},{"period":281,"date":"2026-10-08","nums":[22,19,21,32,48,38,10],"source":"补录历史"},{"period":282,"date":"2026-10-09","nums":[44,3,37,46,29,20,23],"source":"补录历史"},{"period":283,"date":"2026-10-10","nums":[35,8,15,6,21,1,18],"source":"补录历史"},{"period":284,"date":"2026-10-11","nums":[4,35,22,48,3,18,32],"source":"补录历史"},{"period":285,"date":"2026-10-12","nums":[46,45,43,39,20,40,19],"source":"补录历史"},{"period":286,"date":"2026-10-13","nums":[37,49,28,8,29,1,24],"source":"补录历史"},{"period":287,"date":"2026-10-14","nums":[19,47,38,35,6,17,8],"source":"补录历史"},{"period":288,"date":"2026-10-15","nums":[14,48,5,17,46,21,25],"source":"补录历史"},{"period":289,"date":"2026-10-16","nums":[12,29,19,28,47,34,38],"source":"补录历史"},{"period":290,"date":"2026-10-17","nums":[8,9,17,15,7,2,40],"source":"补录历史"},{"period":291,"date":"2026-10-18","nums":[32,10,41,38,22,2,17],"source":"补录历史"},{"period":292,"date":"2026-10-19","nums":[39,10,18,23,16,4,36],"source":"用户确认"},{"period":293,"date":"2026-10-20","nums":[38,10,48,49,13,9,5],"source":"用户确认"},{"period":294,"date":"2026-10-21","nums":[29,43,10,2,34,27,28],"source":"用户确认"},{"period":295,"date":"2026-10-22","nums":[22,28,33,17,13,47,25],"source":"用户确认"}];
+
+const DEFAULT_WEB=[
+  {"name":"大三巴","items":[{"z":["蛇"],"tag":""},{"z":["猪"],"tag":""},{"z":["羊"],"tag":""}]},
+  {"name":"1492","items":[{"z":["兔"],"tag":""},{"z":["龙","虎"],"tag":""},{"z":["鼠"],"tag":""},{"z":["猴"],"tag":""}]},
+  {"name":"1680","items":[{"z":["羊"],"tag":"必开"},{"z":["马"],"tag":""},{"z":["狗","羊"],"tag":""},{"z":["猪"],"tag":""}]},
+  {"name":"49图库","items":[{"z":["马"],"tag":"必开"},{"z":["狗"],"tag":""},{"z":["马"],"tag":""},{"z":["牛"],"tag":""}]},
+  {"name":"王中王","items":[{"z":["猴"],"tag":""},{"z":["鼠"],"tag":"蛇羊"},{"z":["猴"],"tag":"必开"},{"z":["猴"],"tag":""}]},
+  {"name":"1994","items":[{"z":["虎"],"tag":""},{"z":["狗"],"tag":"第一期"},{"z":["羊"],"tag":""},{"z":["鼠"],"tag":""},{"z":["羊"],"tag":""}]}
+];
+const DEFAULT_FORUM=["小麦","兔子先生","科科","独占鳌头","春天（四连胜）","买必赢","莫美琳婷","海锅锅（四连胜）","白浩","R先生","牛大人","芒果","吉吉","中中","大声发","二少（七连胜）","波波写澳码（六连胜）"];
+const DEFAULT_PLANE=["羊皮卷","平特四字","大漠孤烟","恭喜发财","智慧之光","黄金城","领奖台","巫女","下一方","绝版平特","平特1肖"];
+const KEY='xinao_summary_v1';
+let state;
+let picker=null;
+
+const $=id=>document.getElementById(id);
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const pad=n=>String(n).padStart(2,'0');
+const emoji=a=>EMOJI[ANIMALS.indexOf(a)]||'＋';
+
+function notice(s){
+  $('toast').textContent=s;
+  $('toast').classList.add('show');
+  setTimeout(()=>$('toast').classList.remove('show'),2200);
+}
+
+// 解析名字里的初始连胜（支持阿拉伯数字与中文数字）
+function extractInitialStreak(name){
+  const cnMap={'一':1,'二':2,'两':2,'三':3,'四':4,'五':5,'六':6,'七':7,'八':8,'九':9,'十':10};
+  const m=name.match(/[（(]([0-9一二两三四五六七八九十]+)连胜[)）]/);
+  if(!m) return { cleanName: name, initialStreak: 0 };
+  const val = m[1];
+  const num = /^\d+$/.test(val) ? parseInt(val, 10) : (cnMap[val] || 0);
+  const cleanName = name.replace(/[（(][0-9一二两三四五六七八九十]+连胜[)）]/g, '').trim();
+  return { cleanName, initialStreak: num };
+}
+
+function baseState(){
+  return {
+    draws:DRAWS.map(d=>({...d,nums:[...d.nums]})),
+    web:DEFAULT_WEB.map((x,i)=>({...x,id:'w'+i,items:x.items.map((it,j)=>({...it,id:'w'+i+'i'+j,z:[...it.z]}))})),
+    forum:DEFAULT_FORUM.map((name,i)=>{
+      const { cleanName, initialStreak } = extractInitialStreak(name);
+      return { id:'f'+i, name: cleanName, z:[], records:[], initialStreak };
+    }),
+    plane:DEFAULT_PLANE.map((name,i)=>{
+      const { cleanName, initialStreak } = extractInitialStreak(name);
+      return { id:'p'+i, name: cleanName, z:[], records:[], initialStreak };
+    })
+  };
+}
+
+function load(){
+  try{
+    let x=JSON.parse(localStorage.getItem(KEY));
+    if(x&&x.draws&&x.web&&x.forum&&x.plane){
+      // 兼容旧本地数据：剔除用户名中的括号连胜并设为 initialStreak
+      ['forum','plane'].forEach(type=>{
+        x[type].forEach(u=>{
+          if(u.initialStreak === undefined){
+            const { cleanName, initialStreak } = extractInitialStreak(u.name);
+            u.name = cleanName;
+            u.initialStreak = initialStreak;
+          }
+        });
+      });
+      return x;
+    }
+  }catch(e){}
+  return baseState();
+}
+
+state=load();
+
+function save(){
+  try{
+    localStorage.setItem(KEY,JSON.stringify(state));
+    $('saveState').textContent='● 本地保存';
+  }catch(e){
+    $('saveState').textContent='● 请导出备份';
+  }
+}
+
+function zFor(n,p){
+  return (p>=48?ORDER:['蛇','龙','兔','虎','牛','鼠','猪','狗','鸡','猴','羊','马'])[(n-1)%12];
+}
+function openZ(d){return new Set(d.nums.map(n=>zFor(n,d.period)))}
+function drawFor(p){return state.draws.find(d=>d.period===p)}
+function nextDrawPeriod(){return Math.max(0,...state.draws.map(d=>d.period))+1}
+
+function openPicker(target){
+  picker=target;
+  const obj=target.type==='web'
+    ? state.web.find(x=>x.id===target.id)?.items.find(x=>x.id===target.itemId)
+    : state[target.type].find(x=>x.id===target.id);
+  if(!obj) return;
+  const selected=obj.z||[];
+  $('modalTitle').textContent=target.type==='web'?'选择生肖（可多选）':`选择生肖（${obj.name}）`;
+  $('animalGrid').innerHTML=ANIMALS.map((a,i)=>`<button class="animal-option ${selected.includes(a)?'selected':''}" data-animal="${a}"><span>${EMOJI[i]}</span><span>${a}</span></button>`).join('');
+  $('modalBg').hidden=false;
+}
+
+function closePicker(){
+  picker=null;
+  $('modalBg').hidden=true;
+}
+
+function getPickerObj(){
+  if(!picker)return null;
+  if(picker.type==='web')return state.web.find(x=>x.id===picker.id)?.items.find(x=>x.id===picker.itemId);
+  return state[picker.type].find(x=>x.id===picker.id);
+}
+
+function addChoice(type,id,itemId){
+  openPicker({type,id,itemId});
+}
+
+// 网页版块渲染：每个生肖框右上角增加删除角标
+function renderWeb(){
+  $('webList').innerHTML=state.web.map(w=>`
+    <div class="web-row">
+      <div class="web-name">
+        <input class="name-input" data-webname="${w.id}" value="${esc(w.name)}" aria-label="网页名称">
+        <button class="delete" data-delweb="${w.id}" title="删除整个网页">×</button>
+      </div>
+      <div class="choices">
+        ${w.items.map(it=>`
+          <div class="choice">
+            <button class="choice-del" data-delitem="${it.id}" data-web="${w.id}" title="删除该生肖框">×</button>
+            <button class="animal-btn" data-pickweb="${w.id}" data-item="${it.id}" title="选择生肖">${it.z.length?it.z.map(emoji).join(''):'＋'}</button>
+            <input class="tag-input" data-tag="${it.id}" data-web="${w.id}" value="${esc(it.tag||'')}" placeholder="自定义标签">
+          </div>
+        `).join('')}
+        <button class="add-inline" data-additem="${w.id}">＋ 生肖框</button>
+      </div>
+    </div>
+  `).join('');
+}
+
+function runStats(entry){
+  const records=entry.records||[];
+  let streak=0,kind=null;
+  for(let i=records.length-1;i>=0;i--){
+    if(kind===null)kind=records[i].hit;
+    if(records[i].hit!==kind)break;
+    streak++;
+  }
+  const wins=records.filter(r=>r.hit).length,loss=records.length-wins;
+  return {records,streak,kind,wins,loss};
+}
+
+// 生成独立的连胜 UI 徽章
+function buildStreakBadge(u, st){
+  if(st.kind !== null){
+    if(st.kind === true && st.streak > 0){
+      return `<span class="streak-badge win">🔥 ${st.streak} 连胜</span>`;
+    }else if(st.kind === false && st.streak > 0){
+      return `<span class="streak-badge lose">❄️ ${st.streak} 连败</span>`;
+    }
+  }
+  if(u.initialStreak && u.initialStreak > 0){
+    return `<span class="streak-badge win">🔥 ${u.initialStreak} 连胜</span>`;
+  }
+  return `<span class="streak-badge wait">⏳ 待核对</span>`;
+}
+
+// 论坛与飞机用户渲染：连胜完全独立于用户名，做成高颜值 Badge
+function renderUsers(type){
+  const list=state[type];
+  $(type+'List').innerHTML=list.map(u=>{
+    const st=runStats(u);
+    const icons=u.z.length
+      ? u.z.map(z=>`<button class="pick" data-pickuser="${u.id}" data-id="${u.id}" data-type="${type}" title="点击修改">${emoji(z)}</button>`).join('')
+      : `<button class="pick empty" data-pickuser="${u.id}" data-id="${u.id}" data-type="${type}">＋生肖</button>`;
+    
+    const badgeHtml = buildStreakBadge(u, st);
+
+    return `
+      <div class="user-row">
+        <div class="user-main">
+          <div class="user-top">
+            <span class="username">${esc(u.name)}</span>
+            ${badgeHtml}
+          </div>
+          <div class="stats">
+            <span class="pill hit">胜 ${st.wins}</span>
+            <span class="pill miss">负 ${st.loss}</span>
+            <span class="pill">已核对 ${st.records.length} 期</span>
+          </div>
+          <details class="details">
+            <summary>最近战绩 / 展开详情</summary>
+            <div class="record-list">
+              ${st.records.length ? st.records.slice(-30).reverse().map(r=>`
+                <div class="record">
+                  <span>${pad(r.period)}期 · ${r.z.join('、')}</span>
+                  <b style="color:${r.hit?'#21885b':'#c44d59'}">${r.hit?'命中':'未中'}</b>
+                </div>
+              `).join('') : '尚无自动核对记录。设置生肖并录入下一期结果后开始自动核对。'}
+            </div>
+          </details>
+        </div>
+        <div class="picks">
+          ${icons}
+          <button class="delete" data-deluser="${u.id}" data-type="${type}" title="删除用户">×</button>
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+function tally(){
+  let cnt=Object.fromEntries(ANIMALS.map(a=>[a,{web:0,forum:0,plane:0,total:0}]));
+  state.web.forEach(w=>w.items.forEach(it=>it.z.forEach(a=>{cnt[a].web++;cnt[a].total++})));
+  state.forum.forEach(u=>u.z.forEach(a=>{cnt[a].forum++;cnt[a].total++}));
+  state.plane.forEach(u=>u.z.forEach(a=>{cnt[a].plane++;cnt[a].total++}));
+  return Object.entries(cnt).map(([a,c])=>({a,...c})).sort((a,b)=>b.total-a.total||ANIMALS.indexOf(a.a)-ANIMALS.indexOf(b.a));
+}
+
+function renderRanking(){
+  $('ranking').innerHTML=tally().map((x,i)=>`
+    <div class="rank-row">
+      <span class="rank-no">${String(i+1).padStart(2,'0')}</span>
+      <span class="rank-emoji">${emoji(x.a)}</span>
+      <div>
+        <div class="rank-name">${x.a}</div>
+        <div style="font-size:11px;color:var(--muted);margin-top:2px">网页 ${x.web} · 论坛 ${x.forum} · 飞机 ${x.plane}</div>
+      </div>
+      <div class="rank-count">${x.total}<small>${x.web}/${x.forum}/${x.plane}</small></div>
+    </div>
+  `).join('');
+}
+
+function renderHistory(){
+  const rows=[...state.draws].sort((a,b)=>b.period-a.period);
+  $('historyCount').textContent=`${state.draws.length}条记录 · 最新${Math.max(...state.draws.map(d=>d.period))}期`;
+  $('historyList').innerHTML=rows.map(d=>`
+    <div class="hist-row">
+      <div class="hist-head">
+        <span>${pad(d.period)}期 · ${d.date||''}</span>
+        <span>${[...openZ(d)].join('、')}</span>
+      </div>
+      <div class="nums">
+        ${d.nums.map((n,i)=>`<span class="num ${RED.has(n)?'red':BLUE.has(n)?'blue':''} ${i===6?'special':''}">${pad(n)}</span>`).join('')}
+      </div>
+    </div>
+  `).join('');
+}
+
+function refresh(){
+  renderWeb();
+  renderUsers('forum');
+  renderUsers('plane');
+  renderRanking();
+  renderHistory();
+  const d=state.draws.at(-1);
+  $('latestInfo').textContent=`已录入至${pad(d.period)}期 · ${state.draws.length}期记录`;
+  const np=nextDrawPeriod();
+  $('periodInput').value=np;
+  $('numsInput').value='';
+  save();
+}
+
+function tick(){
+  const d=new Date();
+  $('date').textContent=`${d.getFullYear()}年${d.getMonth()+1}月${d.getDate()}日`;
+  $('clock').textContent=[d.getHours(),d.getMinutes(),d.getSeconds()].map(pad).join(':');
+  $('weekday').textContent=['星期日','星期一','星期二','星期三','星期四','星期五','星期六'][d.getDay()];
+  $('todayPeriod').textContent=String(Math.floor((new Date(d.getFullYear(),d.getMonth(),d.getDate())-new Date(d.getFullYear(),0,1))/86400000)+1).padStart(3,'0');
+}
+
+function evaluateDraw(d){
+  const opened=openZ(d);
+  ['forum','plane'].forEach(type=>state[type].forEach(u=>{
+    if(!u.z.length)return;
+    const hit=u.z.some(z=>opened.has(z));
+    if(!(u.records||[]).some(r=>r.period===d.period)){
+      u.records=u.records||[];
+      u.records.push({period:d.period,z:[...u.z],hit});
+      u.records.sort((a,b)=>a.period-b.period);
+    }
+  }));
+}
+
+// 网页版块事件：包含生肖框删除确认
+$('webList').addEventListener('click',e=>{
+  const delItemBtn = e.target.closest('[data-delitem]');
+  if(delItemBtn){
+    e.stopPropagation();
+    const webId = delItemBtn.dataset.web;
+    const itemId = delItemBtn.dataset.delitem;
+    if(confirm('确定删除该生肖框吗？')){
+      const w = state.web.find(x => x.id === webId);
+      if(w){
+        w.items = w.items.filter(it => it.id !== itemId);
+        save();
+        renderWeb();
+        renderRanking();
+        notice('生肖框已删除');
+      }
+    }
+    return;
+  }
+  let b=e.target.closest('[data-pickweb]');
+  if(b){
+    addChoice('web',b.dataset.pickweb,b.dataset.item);
+    return;
+  }
+  b=e.target.closest('[data-additem]');
+  if(b){
+    const w=state.web.find(x=>x.id===b.dataset.additem);
+    w.items.push({id:'i'+Date.now(),z:[],tag:''});
+    save();
+    renderWeb();
+    renderRanking();
+    return;
+  }
+  b=e.target.closest('[data-delweb]');
+  if(b&&confirm('删除这个网页及其所有生肖记录？')){
+    state.web=state.web.filter(w=>w.id!==b.dataset.delweb);
+    save();
+    refresh();
+  }
+});
+
+$('webList').addEventListener('change',e=>{
+  if(e.target.dataset.webname){
+    const w=state.web.find(w=>w.id===e.target.dataset.webname);
+    if(w)w.name=e.target.value.trim()||'未命名网页';
+    save();
+    renderRanking();
+  }
+  if(e.target.dataset.tag!==undefined){
+    const w=state.web.find(w=>w.id===e.target.dataset.web);
+    const it=w?.items.find(i=>i.id===e.target.dataset.tag);
+    if(it){
+      it.tag=e.target.value;
+      save();
+    }
+  }
+});
+
+$('addWeb').onclick=()=>{
+  state.web.push({id:'w'+Date.now(),name:'新网页',items:[{id:'i'+Date.now(),z:[],tag:''}]});
+  save();
+  refresh();
+};
+
+// 论坛与飞机用户事件：修复添加生肖 BUG（正确提取 uid）
+['forum','plane'].forEach(type=>{
+  $(type+'List').addEventListener('click',e=>{
+    const p=e.target.closest('[data-pickuser]');
+    if(p){
+      const uid = p.dataset.pickuser || p.dataset.id;
+      addChoice(type, uid);
+      return;
+    }
+    const d=e.target.closest('[data-deluser]');
+    if(d&&confirm('删除该用户？')){
+      state[type]=state[type].filter(u=>u.id!==d.dataset.deluser);
+      save();
+      refresh();
+    }
+  });
+
+  $('add'+(type==='forum'?'Forum':'Plane')).onclick=()=>{
+    const input=$(type+'NewName'),rawName=input.value.trim();
+    if(!rawName){notice('请输入用户名');return;}
+    const { cleanName, initialStreak } = extractInitialStreak(rawName);
+    state[type].push({id:type[0]+Date.now(),name:cleanName,z:[],records:[],initialStreak});
+    input.value='';
+    save();
+    refresh();
+  };
+});
+
+// 生肖选择弹窗
+$('animalGrid').addEventListener('click',e=>{
+  const b=e.target.closest('[data-animal]');
+  if(!b)return;
+  const obj=getPickerObj();
+  if(!obj)return;
+  const a=b.dataset.animal;
+  obj.z=obj.z||[];
+  if(obj.z.includes(a)){
+    obj.z=obj.z.filter(x=>x!==a);
+  }else if(obj.z.length<3){
+    obj.z.push(a);
+  }
+  $('animalGrid').querySelectorAll('[data-animal]').forEach(x=>x.classList.toggle('selected',obj.z.includes(x.dataset.animal)));
+});
+
+$('modalClear').onclick=()=>{
+  const obj=getPickerObj();
+  if(obj)obj.z=[];
+  $('animalGrid').querySelectorAll('[data-animal]').forEach(x=>x.classList.remove('selected'));
+};
+
+$('modalSave').onclick=()=>{
+  const t=picker?.type;
+  closePicker();
+  save();
+  if(t==='web'){
+    renderWeb();
+    renderRanking();
+  }else{
+    renderUsers(t);
+    renderRanking();
+  }
+};
+
+$('modalClose').onclick=closePicker;
+$('modalBg').addEventListener('click',e=>{if(e.target===$('modalBg'))closePicker()});
+
+$('clearAllZodiac').onclick=()=>{
+  if(!confirm('确定清空网页、论坛、飞机三个版块中所有已选择的生肖？\n网页名称、自定义标签、用户名、历史开奖结果以及累计战绩都会保留。'))return;
+  state.web.forEach(w=>w.items.forEach(it=>it.z=[]));
+  ['forum','plane'].forEach(type=>state[type].forEach(u=>{u.z=[]}));
+  save();
+  refresh();
+  notice('已清空所有已添加生肖，累计战绩已保留');
+};
+
+$('resultForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  const p=Number($('periodInput').value),nums=($('numsInput').value.match(/\d{1,2}/g)||[]).map(Number);
+  if(!Number.isInteger(p)||p<1||p>365||nums.length!==7||nums.some(n=>n<1||n>49)||new Set(nums).size!==7){
+    notice('请输入有效期号和7个不重复的01—49号码');
+    return;
+  }
+  const existing=drawFor(p);
+  if(existing&&!confirm(`第${p}期已有记录，确认覆盖？`))return;
+  const d={
+    period:p,
+    date:(()=>{
+      const y=new Date().getFullYear();
+      const dt=new Date(y,0,p);
+      return `${dt.getFullYear()}-${String(dt.getMonth()+1).padStart(2,'0')}-${String(dt.getDate()).padStart(2,'0')}`;
+    })(),
+    nums,
+    source:'用户录入'
+  };
+  state.draws=state.draws.filter(x=>x.period!==p);
+  state.draws.push(d);
+  state.draws.sort((a,b)=>a.period-b.period);
+  evaluateDraw(d);
+  save();
+  refresh();
+  notice(`第${p}期已保存，已自动核对论坛/飞机生肖`);
+});
+
+$('exportBtn').onclick=()=>{
+  const blob=new Blob([JSON.stringify(state,null,2)],{type:'application/json'}),a=document.createElement('a');
+  a.href=URL.createObjectURL(blob);
+  a.download='新澳汇总备份.json';
+  a.click();
+  URL.revokeObjectURL(a.href);
+};
+
+$('importBtn').onclick=()=>$('importFile').click();
+$('importFile').onchange=async e=>{
+  try{
+    const x=JSON.parse(await e.target.files[0].text());
+    if(!x.draws||!x.web||!x.forum||!x.plane)throw Error();
+    state=x;
+    save();
+    refresh();
+    notice('备份导入成功');
+  }catch{
+    notice('备份文件格式不正确');
+  }
+  e.target.value='';
+};
+
+['forum','plane'].forEach(type=>state[type].forEach(u=>{u.records=u.records||[]}));
+refresh();
+tick();
+setInterval(tick,1000);
+</script>
+<script>
+if('serviceWorker' in navigator && (location.protocol==='https:'||location.hostname==='localhost')){
+  window.addEventListener('load',()=>navigator.serviceWorker.register('./service-worker.js').catch(()=>{}));
+}
+</script>
+</body>
+</html>
