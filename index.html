@@ -126,7 +126,7 @@ button,input,select{min-height:44px}
   <div class="save" id="saveState">● 本地保存</div>
 </header>
 <div class="addbar" style="margin:0 2px 14px">
-  <button class="secondary" id="clearAllZodiac" style="color:#c7445c;border-color:#f0cbd2;width:100%;font-weight:700">一键清空所有已添加生肖</button>
+  <button class="secondary" id="clearAllZodiac" style="color:#c7445c;border-color:#f0cbd2;width:100%;font-weight:700">一键清空所有生肖及自定义标签</button>
 </div>
 <section class="hero">
   <div class="hero-top">
@@ -271,7 +271,7 @@ function extractInitialStreak(name){
 function baseState(){
   return {
     draws:DRAWS.map(d=>({...d,nums:[...d.nums]})),
-    web:DEFAULT_WEB.map((x,i)=>({...x,id:'w'+i,items:x.items.map((it,j)=>({...it,id:'w'+i+'i'+j,z:[...it.z]}))})),
+    web:DEFAULT_WEB.map((x,i)=>({...x,id:'w'+i,items:x.items.map((it,j)=>({...it,id:'w'+i+'i'+j,z:[...it.z],tag:it.tag||''}))})),
     forum:DEFAULT_FORUM.map((name,i)=>{
       const { cleanName, initialStreak } = extractInitialStreak(name);
       return { id:'f'+i, name: cleanName, z:[], records:[], initialStreak };
@@ -644,13 +644,17 @@ $('modalSave').onclick=()=>{
 $('modalClose').onclick=closePicker;
 $('modalBg').addEventListener('click',e=>{if(e.target===$('modalBg'))closePicker()});
 
+// 点击左上方清空按钮：清空生肖 + 清空网页版块自定义标签
 $('clearAllZodiac').onclick=()=>{
-  if(!confirm('确定清空网页、论坛、飞机三个版块中所有已选择的生肖？\n网页名称、自定义标签、用户名、历史开奖结果以及累计战绩都会保留。'))return;
-  state.web.forEach(w=>w.items.forEach(it=>it.z=[]));
+  if(!confirm('确定清空所有已选生肖以及网页自定义标签？\n网页名称、用户名、历史开奖结果以及累计战绩都会保留。'))return;
+  state.web.forEach(w=>w.items.forEach(it=>{
+    it.z = [];
+    it.tag = '';
+  }));
   ['forum','plane'].forEach(type=>state[type].forEach(u=>{u.z=[]}));
   save();
   refresh();
-  notice('已清空所有已添加生肖，累计战绩已保留');
+  notice('已清空所有已选生肖及自定义标签');
 };
 
 $('resultForm').addEventListener('submit',e=>{
